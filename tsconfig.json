@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+
+    // Custom
+    // https://www.totaltypescript.com/tsconfig-cheat-sheet
+    "noUncheckedIndexedAccess": true,
+    "moduleDetection": "force",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "incremental": true,
+    "strictNullChecks": true,
+    "esModuleInterop": true
+  },
+  "include": ["src", "tailwind.config.ts"],
+  "exclude": [
+    "node_modules"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

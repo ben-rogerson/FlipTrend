@@ -1,0 +1,829 @@
+{
+  "data": [
+    {
+      "id": 256654,
+      "company_id": "4BE2C01F-F390-479C-A166-8E0DD73CF7B9",
+      "trading_item_id": 20241564,
+      "name": "BHP Group",
+      "slug": "bhp-group",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "BHP",
+      "unique_symbol": "ASX:BHP",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/materials/asx-bhp/bhp-group-shares",
+      "primary_canonical_url": "/stocks/au/materials/asx-bhp/bhp-group-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000BHP4",
+      "score": {
+        "data": {
+          "value": 2,
+          "income": 3,
+          "health": 5,
+          "past": 1,
+          "future": 2,
+          "management": 0,
+          "misc": 0,
+          "total": 13,
+          "sentence": "Excellent balance sheet second-rate dividend payer."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1851,
+          "description": "BHP Group Limited operates as a resources company in Australia, Europe, China, Japan, India, South Korea, the rest of Asia, North America, South America, and internationally.",
+          "logo_url": "/api/company/image/ASX:BHP/logo",
+          "share_price": 45.520000000000003,
+          "market_cap": 230778010800.0,
+          "pe": 20.166758999999999,
+          "pb": 3.6009980000000001,
+          "price_to_sales": 2.6781030000000001,
+          "analyst_count": 22.0,
+          "return_1d": -0.0091420000000000008,
+          "return_7d": 0.026381000000000002,
+          "return_1yr_abs": -0.020022000000000002,
+          "price_target": 46.453961,
+          "growth_3y": 0.121998,
+          "net_income_growth_annual": 0.121998,
+          "revenue_growth_annual": -0.01813,
+          "dividend_yield": 0.048341000000000002,
+          "primary_industry": {
+            "id": 2010000,
+            "name": "Materials"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/256654-main-thumb/1585186831921",
+          "main_header": "https://images.simplywall.st/asset/company-cover/256654-main-header/1585186732463"
+        }
+      }
+    },
+    {
+      "id": 874262,
+      "company_id": "FEE1A3FE-D7B7-43C7-BCF8-E4956BB22CF5",
+      "trading_item_id": 20164368,
+      "name": "Commonwealth Bank of Australia",
+      "slug": "commonwealth-bank-of-australia",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "CBA",
+      "unique_symbol": "ASX:CBA",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/banks/asx-cba/commonwealth-bank-of-australia-shares",
+      "primary_canonical_url": "/stocks/au/banks/asx-cba/commonwealth-bank-of-australia-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000CBA7",
+      "score": {
+        "data": {
+          "value": 0,
+          "income": 4,
+          "health": 6,
+          "past": 2,
+          "future": 0,
+          "management": 0,
+          "misc": 0,
+          "total": 12,
+          "sentence": "Flawless balance sheet average dividend payer."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1911,
+          "description": "Commonwealth Bank of Australia provides financial services in Australia, New Zealand, and internationally.",
+          "logo_url": "/api/company/image/ASX:CBAPM/logo",
+          "share_price": 116.23999999999999,
+          "market_cap": 194401832053.0,
+          "pe": 19.873424,
+          "pb": 2.669108,
+          "price_to_sales": 7.4403639999999998,
+          "analyst_count": 15.0,
+          "return_1d": -0.0048799999999999998,
+          "return_7d": -0.015249,
+          "return_1yr_abs": 0.17283799999999999,
+          "price_target": 92.015789999999996,
+          "growth_3y": 0.018686000000000001,
+          "net_income_growth_annual": 0.018686000000000001,
+          "revenue_growth_annual": 0.030322999999999999,
+          "dividend_yield": 0.039142999999999997,
+          "primary_industry": {
+            "id": 7010000,
+            "name": "Banks"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/874262-main-thumb/1585186777182",
+          "main_header": "https://images.simplywall.st/asset/company-cover/874262-main-header/1585186656718"
+        }
+      }
+    },
+    {
+      "id": 881503,
+      "company_id": "019E44B1-1227-4AE3-8590-3FC6066EE852",
+      "trading_item_id": 20168590,
+      "name": "CSL",
+      "slug": "csl",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "CSL",
+      "unique_symbol": "ASX:CSL",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/pharmaceuticals-biotech/asx-csl/csl-shares",
+      "primary_canonical_url": "/stocks/au/pharmaceuticals-biotech/asx-csl/csl-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000CSL8",
+      "score": {
+        "data": {
+          "value": 2,
+          "income": 0,
+          "health": 4,
+          "past": 4,
+          "future": 3,
+          "management": 0,
+          "misc": 0,
+          "total": 13,
+          "sentence": "Proven track record with adequate balance sheet."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1916,
+          "description": "CSL Limited researches, develops, manufactures, markets, and distributes biopharmaceutical and vaccines in Australia, the United States, Germany, the United Kingdom, Switzerland, China, and internationally.",
+          "logo_url": "/api/company/image/ASX:CSL/logo",
+          "share_price": 281.69999999999999,
+          "market_cap": 136132293759.0,
+          "pe": 35.567847,
+          "pb": 5.1186889999999998,
+          "price_to_sales": 6.2009819999999998,
+          "analyst_count": 16.0,
+          "return_1d": 0.0046360000000000004,
+          "return_7d": 0.0058919999999999997,
+          "return_1yr_abs": -0.065362000000000003,
+          "price_target": 305.06927300000001,
+          "growth_3y": 0.147172,
+          "net_income_growth_annual": 0.147172,
+          "revenue_growth_annual": 0.073057999999999998,
+          "dividend_yield": 0.012971,
+          "primary_industry": {
+            "id": 6100000,
+            "name": "Pharmaceuticals & Biotech"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/881503-main-thumb/1585186569359",
+          "main_header": "https://images.simplywall.st/asset/company-cover/881503-main-header/1585186619618"
+        }
+      }
+    },
+    {
+      "id": 322495,
+      "company_id": "E2ABE6A2-4B26-498A-B7B6-FE5DFF147C8A",
+      "trading_item_id": 20242718,
+      "name": "National Australia Bank",
+      "slug": "national-australia-bank",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "NAB",
+      "unique_symbol": "ASX:NAB",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/banks/asx-nab/national-australia-bank-shares",
+      "primary_canonical_url": "/stocks/au/banks/asx-nab/national-australia-bank-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000NAB4",
+      "score": {
+        "data": {
+          "value": 1,
+          "income": 3,
+          "health": 6,
+          "past": 3,
+          "future": 0,
+          "management": 0,
+          "misc": 0,
+          "total": 13,
+          "sentence": "Flawless balance sheet with acceptable track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1834,
+          "description": "National Australia Bank Limited provides financial services to individuals and businesses in Australia, New Zealand, and internationally.",
+          "logo_url": "/api/company/image/ASX:NABPI/logo",
+          "share_price": 34.149999999999999,
+          "market_cap": 105601075344.0,
+          "pe": 14.146159000000001,
+          "pb": 1.7268060000000001,
+          "price_to_sales": 5.3247819999999999,
+          "analyst_count": 13.0,
+          "return_1d": -0.0043730000000000002,
+          "return_7d": -0.0052430000000000003,
+          "return_1yr_abs": 0.19993,
+          "price_target": 30.907360000000001,
+          "growth_3y": 0.0090910000000000001,
+          "net_income_growth_annual": 0.0090910000000000001,
+          "revenue_growth_annual": 0.029319000000000001,
+          "dividend_yield": 0.049195000000000003,
+          "primary_industry": {
+            "id": 7010000,
+            "name": "Banks"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/322495-main-thumb/1585186616906",
+          "main_header": "https://images.simplywall.st/asset/company-cover/322495-main-header/1585186610484"
+        }
+      }
+    },
+    {
+      "id": 393269,
+      "company_id": "C84C6BC0-8EB1-4CEC-B7ED-C18315DF16E9",
+      "trading_item_id": 20241304,
+      "name": "Westpac Banking",
+      "slug": "westpac-banking",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "WBC",
+      "unique_symbol": "ASX:WBC",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/banks/asx-wbc/westpac-banking-shares",
+      "primary_canonical_url": "/stocks/au/banks/asx-wbc/westpac-banking-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000WBC1",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 3,
+          "health": 5,
+          "past": 4,
+          "future": 0,
+          "management": 0,
+          "misc": 0,
+          "total": 15,
+          "sentence": "Excellent balance sheet with proven track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1817,
+          "description": "Westpac Banking Corporation provides various banking and financial services in Australia, New Zealand, and internationally.",
+          "logo_url": "/api/company/image/CHIA:WBC/logo",
+          "share_price": 26.02,
+          "market_cap": 90238025253.0,
+          "pe": 12.541769,
+          "pb": 1.244748,
+          "price_to_sales": 4.297663,
+          "analyst_count": 13.0,
+          "return_1d": -0.003065,
+          "return_7d": 0.0,
+          "return_1yr_abs": 0.16943800000000001,
+          "price_target": 23.737660000000002,
+          "growth_3y": -0.017635999999999999,
+          "net_income_growth_annual": -0.017635999999999999,
+          "revenue_growth_annual": 0.025673000000000001,
+          "dividend_yield": 0.055342000000000002,
+          "primary_industry": {
+            "id": 7010000,
+            "name": "Banks"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/393269-main-thumb/1585186773983",
+          "main_header": "https://images.simplywall.st/asset/company-cover/393269-main-header/1585187220867"
+        }
+      }
+    },
+    {
+      "id": 384998,
+      "company_id": "213A0983-44A8-497F-BDA5-EA652181583B",
+      "trading_item_id": 20241281,
+      "name": "ANZ Group Holdings",
+      "slug": "anz-group-holdings",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "ANZ",
+      "unique_symbol": "ASX:ANZ",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/banks/asx-anz/anz-group-holdings-shares",
+      "primary_canonical_url": "/stocks/au/banks/asx-anz/anz-group-holdings-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000ANZ3",
+      "score": {
+        "data": {
+          "value": 4,
+          "income": 4,
+          "health": 6,
+          "past": 2,
+          "future": 0,
+          "management": 0,
+          "misc": 0,
+          "total": 16,
+          "sentence": "Flawless balance sheet, good value and pays a dividend."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1835,
+          "description": "ANZ Group Holdings Limited provides various banking and financial products and services to individuals and business customers in Australia and internationally.",
+          "logo_url": "/api/company/image/ASX:ANZ/logo",
+          "share_price": 28.949999999999999,
+          "market_cap": 86950333549.0,
+          "pe": 12.249976999999999,
+          "pb": 1.2506520000000001,
+          "price_to_sales": 4.3014910000000004,
+          "analyst_count": 14.0,
+          "return_1d": -0.00034499999999999998,
+          "return_7d": -0.0065199999999999998,
+          "return_1yr_abs": 0.207256,
+          "price_target": 27.676079999999999,
+          "growth_3y": 0.017396999999999999,
+          "net_income_growth_annual": 0.017396999999999999,
+          "revenue_growth_annual": 0.034817000000000001,
+          "dividend_yield": 0.055959000000000002,
+          "primary_industry": {
+            "id": 7010000,
+            "name": "Banks"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/industry/7012000-choice2-main-thumb/1585186652938",
+          "main_header": "https://images.simplywall.st/asset/industry/7012000-choice2-main-header/1585186732814"
+        }
+      }
+    },
+    {
+      "id": 4484407,
+      "company_id": "6020CCBB-E4A0-41BB-AA6F-2893CB09DADC",
+      "trading_item_id": 20185047,
+      "name": "Fortescue",
+      "slug": "fortescue",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "FMG",
+      "unique_symbol": "ASX:FMG",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/materials/asx-fmg/fortescue-shares",
+      "primary_canonical_url": "/stocks/au/materials/asx-fmg/fortescue-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000FMG4",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 5,
+          "health": 5,
+          "past": 3,
+          "future": 0,
+          "management": 0,
+          "misc": 0,
+          "total": 16,
+          "sentence": "Excellent balance sheet established dividend payer."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1983,
+          "description": "Fortescue Ltd engages in the exploration, development, production, processing, and sale of iron ore in Australia, China, and internationally.",
+          "logo_url": "/api/company/image/ASX:FMG/logo",
+          "share_price": 25.75,
+          "market_cap": 79206288630.0,
+          "pe": 8.8706329999999998,
+          "pb": 2.640631,
+          "price_to_sales": 2.7580840000000002,
+          "analyst_count": 15.0,
+          "return_1d": -0.0011640000000000001,
+          "return_7d": 0.039143999999999998,
+          "return_1yr_abs": 0.14801600000000001,
+          "price_target": 21.935927,
+          "growth_3y": -0.17314499999999999,
+          "net_income_growth_annual": -0.17314499999999999,
+          "revenue_growth_annual": -0.065490000000000007,
+          "dividend_yield": 0.080777000000000002,
+          "primary_industry": {
+            "id": 2010000,
+            "name": "Materials"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/4484407-main-thumb/1585186773858",
+          "main_header": "https://images.simplywall.st/asset/company-cover/4484407-main-header/1585186781164"
+        }
+      }
+    },
+    {
+      "id": 875660,
+      "company_id": "EE324E4C-35B5-4FCC-896C-DC0D0164CB40",
+      "trading_item_id": 20178495,
+      "name": "Wesfarmers",
+      "slug": "wesfarmers",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "WES",
+      "unique_symbol": "ASX:WES",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/retail/asx-wes/wesfarmers-shares",
+      "primary_canonical_url": "/stocks/au/retail/asx-wes/wesfarmers-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000WES1",
+      "score": {
+        "data": {
+          "value": 2,
+          "income": 4,
+          "health": 3,
+          "past": 3,
+          "future": 2,
+          "management": 0,
+          "misc": 0,
+          "total": 14,
+          "sentence": "Average dividend payer with acceptable track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1914,
+          "description": "Wesfarmers Limited engages in the retail business in Australia, New Zealand, and internationally.",
+          "logo_url": "/api/company/image/CHIA:WES/logo",
+          "share_price": 66.700000000000003,
+          "market_cap": 75689879560.0,
+          "pe": 30.203464,
+          "pb": 8.9903650000000006,
+          "price_to_sales": 1.733422,
+          "analyst_count": 15.0,
+          "return_1d": -0.0069969999999999997,
+          "return_7d": 0.001201,
+          "return_1yr_abs": 0.29138399999999998,
+          "price_target": 58.074800000000003,
+          "growth_3y": 0.088788000000000006,
+          "net_income_growth_annual": 0.088788000000000006,
+          "revenue_growth_annual": 0.037144999999999997,
+          "dividend_yield": 0.029085,
+          "primary_industry": {
+            "id": 4400000,
+            "name": "Retail"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/875660-main-thumb/1585186711921",
+          "main_header": "https://images.simplywall.st/asset/company-cover/875660-main-header/1585186703050"
+        }
+      }
+    },
+    {
+      "id": 875477,
+      "company_id": "0717D298-8EB3-4991-BAC2-A9EA2A19CA05",
+      "trading_item_id": 38677425,
+      "name": "Macquarie Group",
+      "slug": "macquarie-group",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "MQG",
+      "unique_symbol": "ASX:MQG",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/diversified-financials/asx-mqg/macquarie-group-shares",
+      "primary_canonical_url": "/stocks/au/diversified-financials/asx-mqg/macquarie-group-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000MQG1",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 4,
+          "health": 4,
+          "past": 2,
+          "future": 1,
+          "management": 0,
+          "misc": 0,
+          "total": 14,
+          "sentence": "Adequate balance sheet average dividend payer."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1969,
+          "description": "Macquarie Group Limited provides diversified financial services in Australia, the Americas, Europe, the Middle East, Africa, and the Asia Pacific.",
+          "logo_url": "/api/company/image/CHIA:MQWS/logo",
+          "share_price": 189.77000000000001,
+          "market_cap": 69162178821.0,
+          "pe": 16.669602000000001,
+          "pb": 2.1182249999999998,
+          "price_to_sales": 3.7526959999999998,
+          "analyst_count": 11.0,
+          "return_1d": -0.00063199999999999997,
+          "return_7d": -0.026721000000000002,
+          "return_1yr_abs": 0.054161000000000001,
+          "price_target": 191.26591999999999,
+          "growth_3y": 0.062334000000000001,
+          "net_income_growth_annual": 0.062334000000000001,
+          "revenue_growth_annual": 0.036130000000000002,
+          "dividend_yield": 0.037150000000000002,
+          "primary_industry": {
+            "id": 7100000,
+            "name": "Diversified Financials"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/875477-main-thumb/1585186773852",
+          "main_header": "https://images.simplywall.st/asset/company-cover/875477-main-header/1585186735920"
+        }
+      }
+    },
+    {
+      "id": 876923,
+      "company_id": "EEEF1CD0-FB40-4AD2-954E-126B9765E83F",
+      "trading_item_id": 20213244,
+      "name": "Goodman Group",
+      "slug": "goodman-group",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "GMG",
+      "unique_symbol": "ASX:GMG",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/real-estate/asx-gmg/goodman-group-shares",
+      "primary_canonical_url": "/stocks/au/real-estate/asx-gmg/goodman-group-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000GMG2",
+      "score": {
+        "data": {
+          "value": 1,
+          "income": 0,
+          "health": 5,
+          "past": 1,
+          "future": 5,
+          "management": 0,
+          "misc": 0,
+          "total": 12,
+          "sentence": "High growth potential with excellent balance sheet."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 2002,
+          "description": "Goodman Group is an integrated property group with operations throughout Australia, New Zealand, Asia, Europe, the United Kingdom and the Americas.",
+          "logo_url": "/api/company/image/CHIA:GMG/logo",
+          "share_price": 32.039999999999999,
+          "market_cap": 60849793554.0,
+          "pe": 250.61694199999999,
+          "pb": 3.4665140000000001,
+          "price_to_sales": 43.754795000000001,
+          "analyst_count": 11.0,
+          "return_1d": -0.00093499999999999996,
+          "return_7d": -0.0089700000000000005,
+          "return_1yr_abs": 0.67049000000000003,
+          "price_target": 29.696149999999999,
+          "growth_3y": 0.25720900000000002,
+          "net_income_growth_annual": 0.25720900000000002,
+          "revenue_growth_annual": 0.20122799999999999,
+          "dividend_yield": 0.0093629999999999998,
+          "primary_industry": {
+            "id": 7300000,
+            "name": "Real Estate"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/industry/9551732-choice1-main-thumb/1585186592335",
+          "main_header": "https://images.simplywall.st/asset/industry/9551732-choice1-main-header/1585186732782"
+        }
+      }
+    },
+    {
+      "id": 873963,
+      "company_id": "2A122936-E619-4549-BD18-DEA7A205AD1A",
+      "trading_item_id": 20243213,
+      "name": "Woodside Energy Group",
+      "slug": "woodside-energy-group",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "WDS",
+      "unique_symbol": "ASX:WDS",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/energy/asx-wds/woodside-energy-group-shares",
+      "primary_canonical_url": "/stocks/au/energy/asx-wds/woodside-energy-group-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU0000224040",
+      "score": {
+        "data": {
+          "value": 2,
+          "income": 2,
+          "health": 5,
+          "past": 2,
+          "future": 1,
+          "management": 0,
+          "misc": 0,
+          "total": 12,
+          "sentence": "Excellent balance sheet and slightly overvalued."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1954,
+          "description": "Woodside Energy Group Ltd engages in the exploration, evaluation, development, production, and marketing of hydrocarbons in the Asia Pacific, Africa, the Americas, and the Europe.",
+          "logo_url": "/api/company/image/CHIA:WDS/logo",
+          "share_price": 30.199999999999999,
+          "market_cap": 57342243084.0,
+          "pe": 22.310611999999999,
+          "pb": 1.076648,
+          "price_to_sales": 2.6465350000000001,
+          "analyst_count": 13.0,
+          "return_1d": -0.012749,
+          "return_7d": -0.013072,
+          "return_1yr_abs": -0.131685,
+          "price_target": 32.893501999999998,
+          "growth_3y": 0.053515,
+          "net_income_growth_annual": 0.053515,
+          "revenue_growth_annual": -0.013501000000000001,
+          "dividend_yield": 0.071775000000000005,
+          "primary_industry": {
+            "id": 1010000,
+            "name": "Energy"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/873963-main-thumb/1585186838384",
+          "main_header": "https://images.simplywall.st/asset/company-cover/873963-main-header/1585186983306"
+        }
+      }
+    },
+    {
+      "id": 91774,
+      "company_id": "FC7B296B-300B-4710-8F84-D68A5BFBC75B",
+      "trading_item_id": 20185098,
+      "name": "Telstra Group",
+      "slug": "telstra-group",
+      "exchange_symbol": "ASX",
+      "ticker_symbol": "TLS",
+      "unique_symbol": "ASX:TLS",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/au/telecom/asx-tls/telstra-group-shares",
+      "primary_canonical_url": "/stocks/au/telecom/asx-tls/telstra-group-shares",
+      "is_searchable": true,
+      "isin_symbol": "AU000000TLS2",
+      "score": {
+        "data": {
+          "value": 4,
+          "income": 2,
+          "health": 3,
+          "past": 4,
+          "future": 1,
+          "management": 0,
+          "misc": 0,
+          "total": 14,
+          "sentence": "Good value with proven track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1901,
+          "description": "Telstra Group Limited engages in the provision of telecommunications and information services to businesses, governments, and individuals in Australia and internationally.",
+          "logo_url": "/api/company/image/OTCPK:TLGP.Y/logo",
+          "share_price": 3.7599999999999998,
+          "market_cap": 43397378920.0,
+          "pe": 21.409659000000001,
+          "pb": 2.837914,
+          "price_to_sales": 1.9016420000000001,
+          "analyst_count": 14.0,
+          "return_1d": -0.010526000000000001,
+          "return_7d": -0.018277000000000002,
+          "return_1yr_abs": -0.119438,
+          "price_target": 4.4043900000000002,
+          "growth_3y": 0.070035,
+          "net_income_growth_annual": 0.070035,
+          "revenue_growth_annual": 0.023761000000000001,
+          "dividend_yield": 0.047871999999999998,
+          "primary_industry": {
+            "id": 9010000,
+            "name": "Telecom"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "AUD",
+            "trading_item_currency_iso": "AUD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "A$",
+            "reporting_currency_symbol": "A$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "A$",
+            "primary_trading_item_currency_iso": "AUD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/91774-main-thumb/1704769834433",
+          "main_header": "https://images.simplywall.st/asset/company-cover/91774-main-header/1704769834273"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "total_records": 1948,
+    "real_total_records": 1948,
+    "state": "read",
+    "noResultIfLimit": false,
+    "pe": 20.264850607,
+    "return_1yr_abs": 0.064771458830000003,
+    "return_7d": 0.00159106066
+  }
+}

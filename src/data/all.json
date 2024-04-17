@@ -1,0 +1,829 @@
+{
+  "data": [
+    {
+      "id": 21835,
+      "company_id": "424EB65E-8C34-42BF-A107-61F93D4E9E6D",
+      "trading_item_id": 2630413,
+      "name": "Microsoft",
+      "slug": "microsoft",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "MSFT",
+      "unique_symbol": "NasdaqGS:MSFT",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/software/nasdaq-msft/microsoft",
+      "primary_canonical_url": "/stocks/us/software/nasdaq-msft/microsoft",
+      "is_searchable": true,
+      "isin_symbol": "US5949181045",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 0,
+          "health": 6,
+          "past": 6,
+          "future": 3,
+          "management": 0,
+          "misc": 0,
+          "total": 18,
+          "sentence": "Outstanding track record with flawless balance sheet."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1975,
+          "description": "Microsoft Corporation develops and supports software, services, devices and solutions worldwide.",
+          "logo_url": "/api/company/image/WBAG:MSFT/logo",
+          "share_price": 421.89999999999998,
+          "market_cap": 3134901045015.0,
+          "pe": 37.979925999999999,
+          "pb": 13.157038,
+          "price_to_sales": 13.774759,
+          "analyst_count": 53.0,
+          "return_1d": -0.014090999999999999,
+          "return_7d": -0.0085070000000000007,
+          "return_1yr_abs": 0.47445300000000001,
+          "price_target": 471.08787999999998,
+          "growth_3y": 0.12612799999999999,
+          "net_income_growth_annual": 0.12612799999999999,
+          "revenue_growth_annual": 0.126002,
+          "dividend_yield": 0.0071110000000000001,
+          "primary_industry": {
+            "id": 8010000,
+            "name": "Software"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/21835-main-thumb/1585186562284",
+          "main_header": "https://images.simplywall.st/asset/company-cover/21835-main-header/1585186602660"
+        }
+      }
+    },
+    {
+      "id": 24937,
+      "company_id": "743F0744-8987-4339-B565-DEE3A93E9934",
+      "trading_item_id": 2590360,
+      "name": "Apple",
+      "slug": "apple",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "AAPL",
+      "unique_symbol": "NasdaqGS:AAPL",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/tech/nasdaq-aapl/apple",
+      "primary_canonical_url": "/stocks/us/tech/nasdaq-aapl/apple",
+      "is_searchable": true,
+      "isin_symbol": "US0378331005",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 0,
+          "health": 3,
+          "past": 3,
+          "future": 2,
+          "management": 0,
+          "misc": 0,
+          "total": 11,
+          "sentence": "Fair value with acceptable track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1976,
+          "description": "Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide.",
+          "logo_url": "/api/company/image/DB:APC8/logo",
+          "share_price": 176.55000000000001,
+          "market_cap": 2726264090550.0,
+          "pe": 27.015985000000001,
+          "pb": 36.791688000000001,
+          "price_to_sales": 7.068244,
+          "analyst_count": 43.0,
+          "return_1d": 0.0086269999999999993,
+          "return_7d": 0.041102,
+          "return_1yr_abs": 0.068640000000000007,
+          "price_target": 199.92465000000001,
+          "growth_3y": 0.047841000000000002,
+          "net_income_growth_annual": 0.047841000000000002,
+          "revenue_growth_annual": 0.045470999999999998,
+          "dividend_yield": 0.0054380000000000001,
+          "primary_industry": {
+            "id": 8100000,
+            "name": "Tech"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/24937-main-thumb/1585186590198",
+          "main_header": "https://images.simplywall.st/asset/company-cover/24937-main-header/1585186602089"
+        }
+      }
+    },
+    {
+      "id": 32307,
+      "company_id": "08830E11-EECD-4A85-982D-B0AE1DFD6F7A",
+      "trading_item_id": 2635154,
+      "name": "NVIDIA",
+      "slug": "nvidia",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "NVDA",
+      "unique_symbol": "NasdaqGS:NVDA",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/semiconductors/nasdaq-nvda/nvidia",
+      "primary_canonical_url": "/stocks/us/semiconductors/nasdaq-nvda/nvidia",
+      "is_searchable": true,
+      "isin_symbol": "US67066G1040",
+      "score": {
+        "data": {
+          "value": 0,
+          "income": 0,
+          "health": 5,
+          "past": 6,
+          "future": 6,
+          "management": 0,
+          "misc": 0,
+          "total": 17,
+          "sentence": "Exceptional growth potential with outstanding track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1993,
+          "description": "NVIDIA Corporation provides graphics and compute and networking solutions in the United States, Taiwan, China, Hong Kong, and internationally.",
+          "logo_url": "/api/company/image/NEOE:NVDA/logo",
+          "share_price": 881.86000000000001,
+          "market_cap": 2170433832000.0,
+          "pe": 72.931244000000007,
+          "pb": 50.501043000000003,
+          "price_to_sales": 35.626438,
+          "analyst_count": 50.0,
+          "return_1d": -0.026816,
+          "return_7d": 0.0020230000000000001,
+          "return_1yr_abs": 2.295687,
+          "price_target": 982.78346999999997,
+          "growth_3y": 0.22884099999999999,
+          "net_income_growth_annual": 0.22884099999999999,
+          "revenue_growth_annual": 0.223912,
+          "dividend_yield": 0.00018100000000000001,
+          "primary_industry": {
+            "id": 8200000,
+            "name": "Semiconductors"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/32307-main-thumb/1585186591100",
+          "main_header": "https://images.simplywall.st/asset/company-cover/32307-main-header/1585186885935"
+        }
+      }
+    },
+    {
+      "id": 29096,
+      "company_id": "C78A5A43-0234-4436-88BA-98DC268A5FF2",
+      "trading_item_id": 11311662,
+      "name": "Alphabet",
+      "slug": "alphabet",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "GOOGL",
+      "unique_symbol": "NasdaqGS:GOOGL",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/media/nasdaq-googl/alphabet",
+      "primary_canonical_url": "/stocks/us/media/nasdaq-googl/alphabet",
+      "is_searchable": true,
+      "isin_symbol": "US02079K3059",
+      "score": {
+        "data": {
+          "value": 4,
+          "income": 0,
+          "health": 5,
+          "past": 5,
+          "future": 3,
+          "management": 0,
+          "misc": 0,
+          "total": 17,
+          "sentence": "Solid track record with excellent balance sheet."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1998,
+          "description": "Alphabet Inc. offers various products and platforms in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America.",
+          "logo_url": "/api/company/image/NEOE:GOOG/logo",
+          "share_price": 157.72999999999999,
+          "market_cap": 1969336750000.0,
+          "pe": 26.574390000000001,
+          "pb": 6.9202630000000003,
+          "price_to_sales": 6.3796210000000002,
+          "analyst_count": 51.0,
+          "return_1d": -0.010539,
+          "return_7d": 0.034294999999999999,
+          "return_1yr_abs": 0.44879200000000002,
+          "price_target": 165.24000000000001,
+          "growth_3y": 0.117644,
+          "net_income_growth_annual": 0.117644,
+          "revenue_growth_annual": 0.090087,
+          "dividend_yield": null,
+          "primary_industry": {
+            "id": 4300000,
+            "name": "Media"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/29096-main-thumb/1585186618777",
+          "main_header": "https://images.simplywall.st/asset/company-cover/29096-main-header/1585186844065"
+        }
+      }
+    },
+    {
+      "id": 1241120,
+      "company_id": "F2BA2AB1-F6A4-433F-8A2E-E5B0C24B386F",
+      "trading_item_id": 608641395,
+      "name": "Saudi Arabian Oil",
+      "slug": "saudi-arabian-oil",
+      "exchange_symbol": "SASE",
+      "ticker_symbol": 2222,
+      "unique_symbol": "SASE:2222",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/sa/energy/sase-2222/saudi-arabian-oil-shares",
+      "primary_canonical_url": "/stocks/sa/energy/sase-2222/saudi-arabian-oil-shares",
+      "is_searchable": true,
+      "isin_symbol": "SA14TG012N13",
+      "score": {
+        "data": {
+          "value": 1,
+          "income": 2,
+          "health": 5,
+          "past": 3,
+          "future": 1,
+          "management": 0,
+          "misc": 0,
+          "total": 12,
+          "sentence": "Excellent balance sheet with acceptable track record."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1933,
+          "description": "Saudi Arabian Oil Company operates as an integrated energy and chemical company in the Kingdom of Saudi Arabia and internationally.",
+          "logo_url": "/api/company/image/SASE:2222/logo",
+          "share_price": 30.600000000000001,
+          "market_cap": 7331045610000.0,
+          "pe": 16.352471000000001,
+          "pb": 4.8244470000000002,
+          "price_to_sales": 3.9882230000000001,
+          "analyst_count": 14.0,
+          "return_1d": 0.0099010000000000001,
+          "return_7d": 0.0099010000000000001,
+          "return_1yr_abs": 0.016917999999999999,
+          "price_target": 33.752929999999999,
+          "growth_3y": 0.00012899999999999999,
+          "net_income_growth_annual": 0.00012899999999999999,
+          "revenue_growth_annual": -0.036983000000000002,
+          "dividend_yield": 0.055382000000000001,
+          "primary_industry": {
+            "id": 1010000,
+            "name": "Energy"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "SAR",
+            "trading_item_currency_iso": "SAR",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "SAR",
+            "reporting_currency_symbol": "SAR",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "SAR",
+            "primary_trading_item_currency_iso": "SAR"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/industry/1031000-choice1-main-thumb/1585186642957",
+          "main_header": "https://images.simplywall.st/asset/industry/1031000-choice2-main-header/1585186666598"
+        }
+      }
+    },
+    {
+      "id": 18749,
+      "company_id": "D0665877-9EC5-4568-8A29-E8FFF77DF072",
+      "trading_item_id": 2588568,
+      "name": "Amazon.com",
+      "slug": "amazoncom",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "AMZN",
+      "unique_symbol": "NasdaqGS:AMZN",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/retail/nasdaq-amzn/amazoncom",
+      "primary_canonical_url": "/stocks/us/retail/nasdaq-amzn/amazoncom",
+      "is_searchable": true,
+      "isin_symbol": "US0231351067",
+      "score": {
+        "data": {
+          "value": 2,
+          "income": 0,
+          "health": 6,
+          "past": 3,
+          "future": 4,
+          "management": 0,
+          "misc": 0,
+          "total": 15,
+          "sentence": "Flawless balance sheet with reasonable growth potential."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1994,
+          "description": "Amazon.com, Inc. engages in the retail sale of consumer products, advertising, and subscriptions service through online and physical stores in North America and internationally.",
+          "logo_url": "/api/company/image/BUL:AMZ/logo",
+          "share_price": 186.13,
+          "market_cap": 1936262747234.0,
+          "pe": 63.640518,
+          "pb": 9.5913939999999993,
+          "price_to_sales": 3.3686729999999998,
+          "analyst_count": 55.0,
+          "return_1d": -0.015446,
+          "return_7d": 0.0057279999999999996,
+          "return_1yr_abs": 0.81572500000000003,
+          "price_target": 208.65821,
+          "growth_3y": 0.21994,
+          "net_income_growth_annual": 0.21994,
+          "revenue_growth_annual": 0.099084000000000005,
+          "dividend_yield": null,
+          "primary_industry": {
+            "id": 4400000,
+            "name": "Retail"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/18749-main-thumb/1585186608997",
+          "main_header": "https://images.simplywall.st/asset/company-cover/18749-main-header/1585186570397"
+        }
+      }
+    },
+    {
+      "id": 20765463,
+      "company_id": "8ACBC59A-0EC5-42D1-9F7B-6D31ABD4421E",
+      "trading_item_id": 126910337,
+      "name": "Meta Platforms",
+      "slug": "meta-platforms",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "META",
+      "unique_symbol": "NasdaqGS:META",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/media/nasdaq-meta/meta-platforms",
+      "primary_canonical_url": "/stocks/us/media/nasdaq-meta/meta-platforms",
+      "is_searchable": true,
+      "isin_symbol": "US30303M1027",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 0,
+          "health": 5,
+          "past": 6,
+          "future": 3,
+          "management": 0,
+          "misc": 0,
+          "total": 17,
+          "sentence": "Outstanding track record with excellent balance sheet."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 2004,
+          "description": "Meta Platforms, Inc. engages in the development of products that enable people to connect and share with friends and family through mobile devices, personal computers, virtual reality headsets, and wearables worldwide.",
+          "logo_url": "/api/company/image/LSE:0QZI/logo",
+          "share_price": 511.89999999999998,
+          "market_cap": 1305040473761.0,
+          "pe": 33.378701999999997,
+          "pb": 8.5203209999999991,
+          "price_to_sales": 9.6739890000000006,
+          "analyst_count": 57.0,
+          "return_1d": -0.021523,
+          "return_7d": -0.029278999999999999,
+          "return_1yr_abs": 1.3111649999999999,
+          "price_target": 531.22208000000001,
+          "growth_3y": 0.144591,
+          "net_income_growth_annual": 0.144591,
+          "revenue_growth_annual": 0.11164,
+          "dividend_yield": 0.0039069999999999999,
+          "primary_industry": {
+            "id": 4300000,
+            "name": "Media"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/20765463-main-thumb/1585186590160",
+          "main_header": "https://images.simplywall.st/asset/company-cover/20765463-main-header/1585186914273"
+        }
+      }
+    },
+    {
+      "id": 255251,
+      "company_id": "1EA24AB9-B7E5-4D78-957A-7C0022574E1F",
+      "trading_item_id": 2594156,
+      "name": "Berkshire Hathaway",
+      "slug": "berkshire-hathaway",
+      "exchange_symbol": "NYSE",
+      "ticker_symbol": "BRK.A",
+      "unique_symbol": "NYSE:BRK.A",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/diversified-financials/nyse-brk.a/berkshire-hathaway",
+      "primary_canonical_url": "/stocks/us/diversified-financials/nyse-brk.a/berkshire-hathaway",
+      "is_searchable": true,
+      "isin_symbol": "US0846701086",
+      "score": {
+        "data": {
+          "value": 4,
+          "income": 0,
+          "health": 5,
+          "past": 3,
+          "future": 0,
+          "management": 0,
+          "misc": 0,
+          "total": 12,
+          "sentence": "Excellent balance sheet and good value."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1998,
+          "description": "Berkshire Hathaway Inc., through its subsidiaries, engages in the insurance, freight rail transportation, and utility businesses worldwide.",
+          "logo_url": "/api/company/image/BATS-CHIXE:BRYND/logo",
+          "share_price": 608091.0,
+          "market_cap": 871439365624.0,
+          "pe": 9.0882880000000004,
+          "pb": 1.5580700000000001,
+          "price_to_sales": 2.399302,
+          "analyst_count": 2.0,
+          "return_1d": -0.013912000000000001,
+          "return_7d": -0.036694999999999998,
+          "return_1yr_abs": 0.22599,
+          "price_target": 653333.33333000005,
+          "growth_3y": null,
+          "net_income_growth_annual": null,
+          "revenue_growth_annual": 0.013402000000000001,
+          "dividend_yield": null,
+          "primary_industry": {
+            "id": 7100000,
+            "name": "Diversified Financials"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/industry/7112000-choice1-main-thumb/1585186834787",
+          "main_header": "https://images.simplywall.st/asset/industry/7112000-choice1-main-header/1585186741578"
+        }
+      }
+    },
+    {
+      "id": 285467,
+      "company_id": "8B601601-04E4-456E-8B6C-835629914D4E",
+      "trading_item_id": 2626794,
+      "name": "Eli Lilly",
+      "slug": "eli-lilly",
+      "exchange_symbol": "NYSE",
+      "ticker_symbol": "LLY",
+      "unique_symbol": "NYSE:LLY",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/pharmaceuticals-biotech/nyse-lly/eli-lilly",
+      "primary_canonical_url": "/stocks/us/pharmaceuticals-biotech/nyse-lly/eli-lilly",
+      "is_searchable": true,
+      "isin_symbol": "US5324571083",
+      "score": {
+        "data": {
+          "value": 1,
+          "income": 0,
+          "health": 1,
+          "past": 1,
+          "future": 5,
+          "management": 0,
+          "misc": 0,
+          "total": 8,
+          "sentence": "High growth potential and overvalued."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1876,
+          "description": "Eli Lilly and Company discovers, develops, and markets human pharmaceuticals worldwide.",
+          "logo_url": "/api/company/image/DB:LLY/logo",
+          "share_price": 751.63999999999999,
+          "market_cap": 677051831404.0,
+          "pe": 129.19850199999999,
+          "pb": 62.853520000000003,
+          "price_to_sales": 19.840869999999999,
+          "analyst_count": 26.0,
+          "return_1d": -0.010466,
+          "return_7d": -0.041531999999999999,
+          "return_1yr_abs": 1.0058180000000001,
+          "price_target": 812.93615,
+          "growth_3y": 0.27112700000000001,
+          "net_income_growth_annual": 0.27112700000000001,
+          "revenue_growth_annual": 0.15932299999999999,
+          "dividend_yield": 0.0069179999999999997,
+          "primary_industry": {
+            "id": 6100000,
+            "name": "Pharmaceuticals & Biotech"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/285467-main-thumb/1585186597612",
+          "main_header": "https://images.simplywall.st/asset/company-cover/285467-main-header/1585187242117"
+        }
+      }
+    },
+    {
+      "id": 380075,
+      "company_id": "13056585-47A1-4E6A-97E6-BE964E575226",
+      "trading_item_id": 20195531,
+      "name": "Taiwan Semiconductor Manufacturing",
+      "slug": "taiwan-semiconductor-manufacturing",
+      "exchange_symbol": "TWSE",
+      "ticker_symbol": 2330,
+      "unique_symbol": "TWSE:2330",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/tw/semiconductors/twse-2330/taiwan-semiconductor-manufacturing-shares",
+      "primary_canonical_url": "/stocks/tw/semiconductors/twse-2330/taiwan-semiconductor-manufacturing-shares",
+      "is_searchable": true,
+      "isin_symbol": "TW0002330008",
+      "score": {
+        "data": {
+          "value": 2,
+          "income": 3,
+          "health": 5,
+          "past": 2,
+          "future": 3,
+          "management": 0,
+          "misc": 0,
+          "total": 15,
+          "sentence": "Excellent balance sheet with moderate growth potential."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1987,
+          "description": "Taiwan Semiconductor Manufacturing Company Limited, together with its subsidiaries, manufactures, packages, tests, and sells integrated circuits and other semiconductor devices in Taiwan, China, Europe, the Middle East, Africa, Japan, the United States, and internationally.",
+          "logo_url": "/api/company/image/TWSE:2330/logo",
+          "share_price": 818.0,
+          "market_cap": 21214855351456.0,
+          "pe": 25.301030999999998,
+          "pb": 6.1333869999999999,
+          "price_to_sales": 9.8138059999999996,
+          "analyst_count": 34.0,
+          "return_1d": -0.0024390000000000002,
+          "return_7d": 0.048717999999999997,
+          "return_1yr_abs": 0.58527099999999999,
+          "price_target": 854.73482999999999,
+          "growth_3y": 0.14809800000000001,
+          "net_income_growth_annual": 0.14809800000000001,
+          "revenue_growth_annual": 0.143424,
+          "dividend_yield": 0.017114999999999998,
+          "primary_industry": {
+            "id": 8200000,
+            "name": "Semiconductors"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "TWD",
+            "trading_item_currency_iso": "TWD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "NT$",
+            "reporting_currency_symbol": "NT$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "NT$",
+            "primary_trading_item_currency_iso": "TWD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/industry/8212000-choice1-main-thumb/1585186755905",
+          "main_header": "https://images.simplywall.st/asset/industry/8212000-choice2-main-header/1585186783100"
+        }
+      }
+    },
+    {
+      "id": 25016048,
+      "company_id": "26AA8236-810A-4B04-82AA-482568C711E4",
+      "trading_item_id": 555183874,
+      "name": "Broadcom",
+      "slug": "broadcom",
+      "exchange_symbol": "NasdaqGS",
+      "ticker_symbol": "AVGO",
+      "unique_symbol": "NasdaqGS:AVGO",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/us/semiconductors/nasdaq-avgo/broadcom",
+      "primary_canonical_url": "/stocks/us/semiconductors/nasdaq-avgo/broadcom",
+      "is_searchable": true,
+      "isin_symbol": "US11135F1012",
+      "score": {
+        "data": {
+          "value": 1,
+          "income": 2,
+          "health": 4,
+          "past": 2,
+          "future": 5,
+          "management": 0,
+          "misc": 0,
+          "total": 14,
+          "sentence": "High growth potential with adequate balance sheet."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1961,
+          "description": "Broadcom Inc. designs, develops, and supplies various semiconductor devices with a focus on complex digital and mixed signal complementary metal oxide semiconductor based devices and analog III-V based products worldwide.",
+          "logo_url": "/api/company/image/NEOE:AVGO/logo",
+          "share_price": 1344.0699999999999,
+          "market_cap": 622870582014.0,
+          "pe": 53.77919,
+          "pb": 8.8621960000000009,
+          "price_to_sales": 16.026516999999998,
+          "analyst_count": 33.0,
+          "return_1d": -0.027768999999999999,
+          "return_7d": 0.0034640000000000001,
+          "return_1yr_abs": 1.1694640000000001,
+          "price_target": 1497.9597000000001,
+          "growth_3y": 0.23393600000000001,
+          "net_income_growth_annual": 0.23393600000000001,
+          "revenue_growth_annual": 0.14535500000000001,
+          "dividend_yield": 0.015624000000000001,
+          "primary_industry": {
+            "id": 8200000,
+            "name": "Semiconductors"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "USD",
+            "trading_item_currency_iso": "USD",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "$",
+            "reporting_currency_symbol": "$",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "$",
+            "primary_trading_item_currency_iso": "USD"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/company-cover/25016048-main-thumb/1585186652534",
+          "main_header": "https://images.simplywall.st/asset/company-cover/25016048-main-header/1585186704838"
+        }
+      }
+    },
+    {
+      "id": 323452,
+      "company_id": "71BE77AA-1311-4447-B4B8-BCB7F8815B88",
+      "trading_item_id": 20224168,
+      "name": "Novo Nordisk",
+      "slug": "novo-nordisk",
+      "exchange_symbol": "CPSE",
+      "ticker_symbol": "NOVO B",
+      "unique_symbol": "CPSE:NOVO B",
+      "primary_ticker": true,
+      "last_updated": 1713052800000,
+      "canonical_url": "/stocks/dk/pharmaceuticals-biotech/cph-novo-b/novo-nordisk-shares",
+      "primary_canonical_url": "/stocks/dk/pharmaceuticals-biotech/cph-novo-b/novo-nordisk-shares",
+      "is_searchable": true,
+      "isin_symbol": "DK0062498333",
+      "score": {
+        "data": {
+          "value": 3,
+          "income": 0,
+          "health": 4,
+          "past": 6,
+          "future": 4,
+          "management": 0,
+          "misc": 0,
+          "total": 17,
+          "sentence": "Outstanding track record with reasonable growth potential."
+        }
+      },
+      "grid": {
+        "data": {
+          "year_founded": 1923,
+          "description": "Novo Nordisk A/S, together with its subsidiaries, engages in the research and development, manufacture, and distribution of pharmaceutical products in Europe, the Middle East, Africa, Mainland China, Hong Kong, Taiwan, North America, and internationally.",
+          "logo_url": "/api/company/image/OTCPK:NONO.F/logo",
+          "share_price": 880.0,
+          "market_cap": 3926333657840.0,
+          "pe": 46.919131,
+          "pb": 36.845877999999999,
+          "price_to_sales": 16.904834000000001,
+          "analyst_count": 25.0,
+          "return_1d": 0.012309,
+          "return_7d": 0.014409,
+          "return_1yr_abs": 0.53765499999999999,
+          "price_target": 901.80115999999998,
+          "growth_3y": 0.14813299999999999,
+          "net_income_growth_annual": 0.14813299999999999,
+          "revenue_growth_annual": 0.134406,
+          "dividend_yield": 0.010682000000000001,
+          "primary_industry": {
+            "id": 6100000,
+            "name": "Pharmaceuticals & Biotech"
+          },
+          "currency_info": {
+            "reporting_unit_abs": 1,
+            "reporting_currency_iso": "DKK",
+            "trading_item_currency_iso": "DKK",
+            "reporting_unit_text": "Millions",
+            "reporting_unit_text_abs": "Absolute",
+            "primary_trading_item_currency_symbol": "DKK",
+            "reporting_currency_symbol": "DKK",
+            "reporting_unit": 1000000,
+            "trading_item_currency_symbol": "DKK",
+            "primary_trading_item_currency_iso": "DKK"
+          },
+          "main_thumb": "https://images.simplywall.st/asset/industry/6121000-choice1-main-thumb/1585186579278",
+          "main_header": "https://images.simplywall.st/asset/industry/6121000-choice2-main-header/1585186699299"
+        }
+      }
+    }
+  ],
+  "meta": {
+    "total_records": 55272,
+    "real_total_records": 55272,
+    "state": "read",
+    "noResultIfLimit": false,
+    "pe": 17.962074009999998,
+    "return_1yr_abs": 0.1252373802,
+    "return_7d": -0.0096769552879999998
+  }
+}
