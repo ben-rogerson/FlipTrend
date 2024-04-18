@@ -25,7 +25,7 @@ export const devBreakpointDisplay = plugin(({ addBase, theme }) => {
 
   const screens = theme('screens', {})
   const breakpoints = Object.keys(screens)
-  const firstBreakpoint = breakpoints[0] || ''
+  const firstBreakpoint = breakpoints[0] ?? ''
 
   addBase({
     'body::after': {

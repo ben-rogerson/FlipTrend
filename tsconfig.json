@@ -34,7 +34,7 @@
     "strictNullChecks": true,
     "esModuleInterop": true
   },
-  "include": ["src", "tailwind.config.ts"],
+  "include": ["src", "tailwind.config.ts","tailwind/*.ts"],
   "exclude": [
     "node_modules"
   ],

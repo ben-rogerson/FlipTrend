@@ -19,6 +19,7 @@ module.exports = {
     'postcss.config.js',
     'vite.config.ts',
     'tailwind.config.ts',
+    'tailwind/*.ts',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh', '@tanstack/eslint-plugin-query'],
