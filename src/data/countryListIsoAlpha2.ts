@@ -251,5 +251,5 @@ const COUNTRY_CODES_ISOALPHA2 = {
   MZ: 'Mozambique',
 }
 
-export const countriesIsoAlpha2 = () =>
+export const getCountries = () =>
   new Map(Object.entries(COUNTRY_CODES_ISOALPHA2))

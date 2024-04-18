@@ -5,8 +5,8 @@ export const Footer = () => {
   const today = new Date()
   const year = today.getFullYear()
   return (
-    <div className="padded-x select-none">
-      <div className="relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-y-10 border-t py-10">
+    <div className="select-none">
+      <div className="relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-y-10">
         <div className="col-span-2 w-full text-center md:absolute">
           Market data provided by{' '}
           <a

@@ -41,7 +41,7 @@ export const SnowflakeChart = (props: {
   backgroundColor?: string
   borderColor?: string
 }) => {
-  // TODO: Look to move these to a global state (apparently no perf issues here)
+  // TODO: Look to move these to a global state (apparently no perf issues here though)
   const colorGridBg = getRootCssValue('--color-grid-bg')
   const colorGridLine = getRootCssValue('--color-grid-line')
 
@@ -74,10 +74,7 @@ export const SnowflakeChart = (props: {
         className="p-[12%]"
       />
       <figcaption className="sr-only">
-        Total company score: {props.graphData.total} out of 30. Value:{' '}
-        {props.graphData.value}. Future: {props.graphData.future}. Past:{' '}
-        {props.graphData.past}. Health: {props.graphData.health}. Dividend:{' '}
-        {props.graphData.income}
+        {`Total company score: ${props.graphData.total} out of 30. Value: ${props.graphData.value}. Future: ${props.graphData.future}. Past: ${props.graphData.past}. Health: ${props.graphData.health}. Dividend: ${props.graphData.income}`}
       </figcaption>
       <svg
         viewBox="0 0 250 250"

@@ -174,6 +174,8 @@ export default {
     backgroundColor: {
       white: 'var(--color-white)',
       'button-hover': 'var(--color-cyprus-light)',
+      page: 'var(--color-dark-green)',
+      border: 'var(--color-cyprus-light)',
     },
     textColor: {
       white: 'var(--color-white)',
@@ -183,9 +185,11 @@ export default {
     },
     gradientColorStops: {
       'bg-highlight': 'var(--color-sapphire)',
-      bg: 'var(--color-dark-green)',
       blue: 'var(--color-deep-sky-blue)',
       green: 'var(--color-manz)',
+    },
+    animation: {
+      spin: 'spin .65s ease-in-out infinite',
     },
     extend: {
       transitionDelay: {

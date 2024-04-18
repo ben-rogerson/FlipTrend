@@ -5,10 +5,10 @@
  * @example
  * ```ts
  * const num = 1000000
- * const { abbrNumber, abbrWords } = abbreviateNumber(num) // '1m'
+ * const { abbrNumber, abbrWords } = getAbbreviatedNumber(num) // '1m'
  * ```
  */
-export const abbreviateNumber = (num: number) => {
+export const getAbbreviatedNumber = (num: number) => {
   if (num >= 1_000_000_000_000) {
     const abbrNum = (num / 1_000_000_000_000).toFixed(1)
     return { abbrNumber: `${abbrNum}t`, abbrWords: `${abbrNum} trillion` }

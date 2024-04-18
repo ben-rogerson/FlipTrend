@@ -6,16 +6,14 @@ import { BaseLayout } from '@/layouts/BaseLayout'
 
 const queryClient = new QueryClient()
 
-const App = () => {
-  return (
-    <ErrorBoundary FallbackComponent={ErrorDisplay}>
-      <QueryClientProvider client={queryClient}>
-        <BaseLayout>
-          <AppRoutes />
-        </BaseLayout>
-      </QueryClientProvider>
-    </ErrorBoundary>
-  )
-}
+const App = () => (
+  <ErrorBoundary FallbackComponent={ErrorDisplay}>
+    <QueryClientProvider client={queryClient}>
+      <BaseLayout>
+        <AppRoutes />
+      </BaseLayout>
+    </QueryClientProvider>
+  </ErrorBoundary>
+)
 
 export default App
