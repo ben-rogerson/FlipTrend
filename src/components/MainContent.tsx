@@ -2,7 +2,6 @@ import { Redirect } from 'wouter'
 import { PROJECT_NAME } from '@/constants'
 import { useTitle } from '@/hooks/useTitle'
 import { useCountryId } from '@/hooks/useCountryId'
-import { HeaderButton } from '@/components/HeaderButton'
 import { CompanyCard } from '@/components/CompanyCard'
 import { LoaderBar } from '@/components/LoaderBar'
 import { getCountries } from '@/data/countryListIsoAlpha2'
@@ -36,6 +35,7 @@ import {
 
 import allDataTemp from '@/data/all.json'
 import countryDataTemp from '@/data/au.json'
+import { MainHeadingComboBox } from '@/components/MainHeadingComboBox'
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const dataAll: CompaniesResponse = JSON.parse(JSON.stringify(allDataTemp))
@@ -57,7 +57,7 @@ export const MainContent = () => {
   const countryId = useCountryId()
 
   const countryName = countryNames.get(countryId)
-  const pageTitle = `${countryName ?? 'Global'} Market`
+  const pageTitle = `${countryName ?? 'Global'} Locations`
 
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
   if (countryId && !countryName) return <Redirect to="/" />
@@ -65,18 +65,19 @@ export const MainContent = () => {
   const response = countryId ? dataCountryParsed.data : dataAllParsed.data
 
   return (
-    <article className="grid gap-4 2xl:gap-12">
-      <div className="grid gap-4">
-        <div className="font-bold uppercase tracking-wide text-muted">
-          Company Performance
+    <article className="grid select-none gap-8 md:gap-12">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-6">
+        <div className="grid gap-4">
+          <div className="font-bold uppercase tracking-wide text-muted">
+            Company stock analysis
+          </div>
+          <MainHeadingComboBox />
         </div>
-        <div>
-          <HeaderButton pageTitle={pageTitle} />
-        </div>
+        <div className="grid items-end pb-3">Sort</div>
       </div>
-      <div className="text-muted">
+      {/* <div className="text-muted">
         {response.meta.real_total_records} results
-      </div>
+      </div> */}
       <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
         {response.data.map(company => (
           <CompanyCard key={company.id} {...company} />

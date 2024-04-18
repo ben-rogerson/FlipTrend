@@ -3,7 +3,7 @@ import { PROJECT_LINK, PROJECT_NAME } from '@/constants'
 import { Link } from 'wouter'
 
 export const Header = () => (
-  <div className="flex items-center justify-between">
+  <div className="flex select-none items-center justify-between">
     <Link
       to="/"
       className="padded-x padded-y flex items-center gap-4 text-4xl font-bold tracking-tight"

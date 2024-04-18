@@ -33,6 +33,7 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/array-type': ['error', { default: 'array-simple' }],
     '@typescript-eslint/restrict-template-expressions': 'off',
+    '@typescript-eslint/non-nullable-type-assertion-style': 'off',
     '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
     '@typescript-eslint/no-unnecessary-type-assertion': 'error',
     '@typescript-eslint/no-inferrable-types': 'error',

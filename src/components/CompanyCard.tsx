@@ -26,7 +26,7 @@ export const CompanyCard = (props: Company) => {
       className="group/card @container/card"
     >
       <article className="group-hover/card:border-light grid h-full gap-3 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight px-8 py-7 text-lg @sm/card:gap-6 @sm/card:pb-10 @sm/card:pt-7 @sm/card:text-2xl">
-        <header className="grid items-start gap-6 text-center @sm/card:grid-cols-[minmax(0,1fr)_auto] @sm/card:text-left">
+        <header className="grid items-start text-center @sm/card:grid-cols-[minmax(0,1fr)_auto] @sm/card:text-left">
           <div className="grid gap-1">
             <div className="text-muted">{props.unique_symbol}</div>
             <h2 className="truncate text-2xl font-bold tracking-tight @xs/card:text-3xl @md/card:text-4xl">
@@ -46,7 +46,7 @@ export const CompanyCard = (props: Company) => {
             {/* ({props.score.data.total}) */}
           </div>
         </header>
-        <div className="mx-auto w-full max-w-xs pt-2 md:px-7">
+        <div className="mx-auto w-full max-w-xs select-none pt-2 md:px-7">
           <SnowflakeChart graphData={props.score.data} {...colorSet} />
         </div>
         <div className="absolute inset-x-0 -bottom-4 text-center">

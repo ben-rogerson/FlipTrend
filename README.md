@@ -13,7 +13,7 @@ A web app to display company stock items by country.
 - [ ] Scaffold basic UI with mock data
 - [ ] Fetch data from API
 - [ ] Display data in UI
-- [ ] Add routing for Market/Location filtering
+- [ ] Add routing for Location filtering
 - [ ] Add market cap sorting by URL params
 - [ ] Error management
 
@@ -156,7 +156,14 @@ Anything beyond this would require a more complex structure with a monorepo setu
 
 - [x] Used [Tailwind CSS](https://tailwindcss.com/) for styling to ensure minimal css generation from only the used classes.
 - [x] Added [Million.js](https://million.dev/docs/introduction#why-millionjs) to speed up React reconciliation - it removes the React diffing algorithm and directly updates the DOM nodes instead - this benefits my large market list which contains many elements.
-- [x] Used list virtualisation/windowing using [TanStack virtualiser](#) to only render the visible items in the list - this avoids rendering all the items at once to give butter-smooth scrolling and lightning fast page loads. Con: Say goodbye to browser based "Find" (⌘F).
+- [x] Added virtualizing to the company listings using [TanStack Virtual](https://tanstack.com/virtual/latest)
+  - Only renders the visible items in the list.
+  - This avoids rendering all the items at once to allow butter-smooth scrolling and lightning fast page loads.
+  - Tradeoff: Say goodbye to browser based "Find" (⌘F).
+- [x] Added virtualizing to the country list using [TanStack Virtual](https://tanstack.com/virtual/latest)
+  - There was lag when searching/opening the country list in the combobox dropdown.
+  - Added virtualizing to only render the visible items in the list.
+  - Tradeoff: Had to abandon the built in filtering support from the [cmdk](https://cmdk.paco.me/) package (used for the item list).
 - [x] Reduced re-rendering by using `React.memo` and `useMemo` to prevent unnecessary re-renders.
 - [x] Used the [Web Vitals Extension](https://github.com/GoogleChrome/web-vitals-extension) to assess performance and improve metrics throughout development.
 - [ ] Used [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) in the Chrome developer tools to improve performance score from 90 to 100 (screenshot?).

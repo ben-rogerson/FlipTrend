@@ -1,4 +1,4 @@
-const COUNTRY_CODES_ISOALPHA2 = {
+export const COUNTRY_CODES_ISOALPHA2 = {
   BD: 'Bangladesh',
   BE: 'Belgium',
   BF: 'Burkina Faso',
