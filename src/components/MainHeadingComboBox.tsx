@@ -31,7 +31,7 @@ const countryComboboxData = Object.entries({
 
 export const MainHeadingComboBox = () => {
   const [open, setOpen] = React.useState(false)
-  const isDesktop = useMediaQuery('(min-width: 768px)')
+  const isDesktop = useMediaQuery('(min-width: 1000px)')
   const countryId = useCountryId()
   const defaultCountry = (
     countryId
@@ -64,7 +64,7 @@ export const MainHeadingComboBox = () => {
     return (
       <Popover open={open} onOpenChange={setOpen}>
         <PopoverTrigger asChild>{trigger}</PopoverTrigger>
-        <PopoverContent className="p-0" align="start">
+        <PopoverContent className="w-[350px] p-0" align="start">
           <CountryList
             selectedCountry={selectedCountry}
             setOpen={setOpen}
@@ -102,7 +102,7 @@ const CountryList = (props: {
   const virtualizer = useVirtualizer({
     count: filteredOptions.length,
     getScrollElement: () => parentRef.current,
-    estimateSize: () => 35,
+    estimateSize: () => 50,
     overscan: 7,
   })
 
@@ -116,17 +116,12 @@ const CountryList = (props: {
     )
   }
 
-  const handleKeyDown = (event: React.KeyboardEvent) => {
-    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
-      event.preventDefault()
-    }
-  }
-
   return (
-    <Command shouldFilter={false} onKeyDown={handleKeyDown}>
+    <Command shouldFilter={false}>
       <CommandInput
         onValueChange={handleSearch}
         placeholder="Country search&hellip;"
+        className="py-7 text-2xl"
         // eslint-disable-next-line jsx-a11y/no-autofocus -- Okay in this case as it's only focussed when the dropdown is open
         autoFocus
       />
@@ -145,7 +140,7 @@ const CountryList = (props: {
               if (!virtualItem) return null
               return (
                 <CommandItem
-                  className="absolute left-0 top-0 w-full"
+                  className="absolute left-0 top-0 w-full text-2xl"
                   style={{
                     height: `${virtualOption.size}px`,
                     transform: `translateY(${virtualOption.start}px)`,
@@ -163,7 +158,7 @@ const CountryList = (props: {
                 >
                   <Check
                     className={cn(
-                      'mr-2 h-4 w-4',
+                      'text-high text-primary mr-2 h-4 w-4',
                       props.selectedCountry.value === virtualItem.value
                         ? 'opacity-100'
                         : 'opacity-0'
@@ -179,42 +174,3 @@ const CountryList = (props: {
     </Command>
   )
 }
-
-// const CountryList = (props: {
-//   setOpen: (open: boolean) => void
-//   setSelectedCountry: (country: CountryItem | null) => void
-// }) => {
-//   return (
-//     <Command
-//       filter={(_, search, keywords = []) => {
-//         if (!keywords[0]?.toLowerCase().includes(search.trim().toLowerCase()))
-//           return 0
-//         return 1
-//       }}
-//     >
-//       <CommandInput placeholder="Country search&hellip;" />
-//       <CommandList>
-//         <CommandEmpty>No results found.</CommandEmpty>
-//         <CommandGroup>
-//           {countryComboboxData.map(country => (
-//             <CommandItem
-//               key={country.value}
-//               value={country.value}
-//               keywords={[country.label]}
-//               onSelect={(value: string) => {
-//                 props.setSelectedCountry(
-//                   countryComboboxData.find(
-//                     company => company.value === value
-//                   ) ?? null
-//                 )
-//                 props.setOpen(false)
-//               }}
-//             >
-//               {country.label}
-//             </CommandItem>
-//           ))}
-//         </CommandGroup>
-//       </CommandList>
-//     </Command>
-//   )
-// }

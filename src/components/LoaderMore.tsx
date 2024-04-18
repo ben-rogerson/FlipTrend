@@ -1,7 +1,7 @@
 import { Loader } from '@/components/SvgIcons'
 import { cn } from '@/utils/styles'
 
-export const LoaderBar = (props: { isLoading: boolean }) => (
+export const LoaderMore = (props: { isLoading: boolean }) => (
   <div className="@container/loader" aria-hidden>
     <div
       className={cn(

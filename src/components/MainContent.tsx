@@ -3,7 +3,7 @@ import { PROJECT_NAME } from '@/constants'
 import { useTitle } from '@/hooks/useTitle'
 import { useCountryId } from '@/hooks/useCountryId'
 import { CompanyCard } from '@/components/CompanyCard'
-import { LoaderBar } from '@/components/LoaderBar'
+import { LoaderMore } from '@/components/LoaderMore'
 import { getCountries } from '@/data/countryListIsoAlpha2'
 import {
   type CompaniesResponse,
@@ -36,6 +36,7 @@ import {
 import allDataTemp from '@/data/all.json'
 import countryDataTemp from '@/data/au.json'
 import { MainHeadingComboBox } from '@/components/MainHeadingComboBox'
+import { LoaderCard } from '@/components/LoaderCard'
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const dataAll: CompaniesResponse = JSON.parse(JSON.stringify(allDataTemp))
@@ -78,13 +79,14 @@ export const MainContent = () => {
       {/* <div className="text-muted">
         {response.meta.real_total_records} results
       </div> */}
+      <LoaderCard isLoading={false} />
       <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
         {response.data.map(company => (
           <CompanyCard key={company.id} {...company} />
         ))}
       </div>
       <div className="xs:py-10 py-10 md:py-10">
-        <LoaderBar isLoading={false} />
+        <LoaderMore isLoading={false} />
       </div>
     </article>
   )
