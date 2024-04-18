@@ -18,7 +18,7 @@ const COUNTRY_CODES_ISOALPHA2 = {
   BV: 'Bouvet Island',
   BW: 'Botswana',
   WS: 'Samoa',
-  BQ: 'Bonaire, Saint Eustatius and Saba ',
+  BQ: 'Bonaire, Saint Eustatius and Saba',
   BR: 'Brazil',
   BS: 'Bahamas',
   JE: 'Jersey',

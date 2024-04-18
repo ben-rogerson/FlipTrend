@@ -67,3 +67,24 @@ export const IconDownArrow = (props: SVGIconProps) => (
     />
   </Icon>
 )
+
+export const IconGem = (props: SVGIconProps) => (
+  <Icon {...props} viewBox="0 0 20 19">
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M5.142 1.587h10.283l3.428 5.142-8.57 11.14-8.57-11.14z"
+      vectorEffect="non-scaling-stroke"
+    />
+    <path
+      stroke="currentColor"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      strokeWidth="2"
+      d="M9.426 1.587 6.856 6.73l3.427 11.14 3.428-11.14-2.57-5.142M1.714 6.73h17.139"
+      vectorEffect="non-scaling-stroke"
+    />
+  </Icon>
+)

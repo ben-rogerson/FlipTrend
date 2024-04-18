@@ -1,5 +1,5 @@
-import { Link } from 'wouter'
 import { IconGithub } from '@/components/SvgIcons'
+import { PROJECT_LINK, PROJECT_NAME } from '@/constants'
 
 export const Footer = () => {
   const today = new Date()
@@ -7,25 +7,29 @@ export const Footer = () => {
   return (
     <div className="padded-x select-none">
       <div className="relative grid grid-cols-[minmax(0,1fr)_auto] items-center gap-y-10 border-t py-10">
-        <div className="pointer-events-none col-span-2 w-full text-center md:absolute">
+        <div className="col-span-2 w-full text-center md:absolute">
           Market data provided by{' '}
-          <Link
-            to="https://simplywall.st"
-            className="text-link pointer-events-auto whitespace-nowrap hover:underline"
+          <a
+            href="https://simplywall.st"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap text-link hover:underline"
           >
             Simply Wall St.
-          </Link>
+          </a>
         </div>
-        <div aria-hidden>FlipTrend © {year}</div>
-        <Link
-          to="https://github.com/ben-rogerson/fliptrend"
+        <div aria-hidden>
+          {PROJECT_NAME} © {year}
+        </div>
+        <a
+          href={PROJECT_LINK}
           target="_blank"
           rel="noopener noreferrer"
-          className="-mt-1 justify-self-end"
-          aria-label="GitHub repository for FlipTrend"
+          className="relative -mt-1 justify-self-end"
+          aria-label={`GitHub repository for ${PROJECT_NAME}`}
         >
           <IconGithub className="text-[150%]" />
-        </Link>
+        </a>
       </div>
     </div>
   )

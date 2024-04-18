@@ -11,10 +11,14 @@ const globalVariableStyles = plugin(({ addBase }) => {
       '--color-sapphire': 'hsl(198 82% 13%)',
       '--color-cyprus': 'hsl(197 76% 13%)',
       '--color-cyprus-light': 'hsl(197 59% 19%)',
+      '--color-cyprus-lighter': 'hsl(197 59% 23%)',
       '--color-link-water': 'hsl(198 16% 78%)',
       '--color-deep-sky-blue': 'hsl(198 100% 50%)',
       '--color-manz': 'hsl(70 76% 61%)',
       '--color-flamingo': 'hsl(0 76% 61%)',
+      // For app usage
+      '--color-grid-line': 'var(--color-cyprus-light)',
+      '--color-grid-bg': 'hsl(197 89% 11%)',
     },
   })
 })
@@ -125,7 +129,7 @@ const responsiveStyles = plugin(({ addBase }) => {
       minWidth: '0', // Make everything responsive by default.
     },
     '.responsive-text': {
-      '@apply text-base md:text-lg lg:text-xl xl:text-2xl': '',
+      '@apply text-lg lg:text-xl xl:text-2xl': '',
     },
     '.margined-x': {
       '@apply mx-5 md:mx-10': '',
@@ -165,6 +169,7 @@ export default {
     },
     borderColor: {
       DEFAULT: 'var(--color-cyprus-light)',
+      light: 'var(--color-cyprus-lighter)',
     },
     backgroundColor: {
       white: 'var(--color-white)',

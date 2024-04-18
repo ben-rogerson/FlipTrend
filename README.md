@@ -1,7 +1,5 @@
 # FlipTrend
 
-<p><a href="https://dripwave.vercel.app/" target="_blank"><img src="./.github/preview-logo.png" width="300" alt="DripWave Logo" /></a></p>
-
 A web app to display company stock items by country.
 
 ## TODO
@@ -12,7 +10,6 @@ A web app to display company stock items by country.
 - [ ] Setup project
 - [ ] Make it deploy
 - [ ] Work out the data structure
-- [ ] Work out i18n structure
 - [ ] Scaffold basic UI with mock data
 - [ ] Fetch data from API
 - [ ] Display data in UI
@@ -105,7 +102,7 @@ Anything beyond this would require a more complex structure with a monorepo setu
 
 </details>
 
-## Decision justification
+## Why I chose&hellip;
 
 - [ ] Why use client rendering (non-ssr)
   - This app aims to be as simple as possible (no over engineering) - SSR adds a server and more complexity.
@@ -127,6 +124,7 @@ Anything beyond this would require a more complex structure with a monorepo setu
   - It’s quick to add styles for responsive design.
   - Cons: It can be hard to read the JSX and maintain in large projects / It forces you to use components to avoid duplicate class sets (good thing though) / You pretty much need to use a helper like `clsx` or `classnames` to deal with conditional classes and large class sets.
 - [ ] Why Tanstack
+  - ....
 - [ ] Why Million.js
   - It’s a faster React compiler that removes the diffing algorithm.
   - It’s great for large lists, like this app has after you scroll a few times.
@@ -137,12 +135,16 @@ Anything beyond this would require a more complex structure with a monorepo setu
   - It offers hooks for easy navigation and URL params.
   - It a similar api to React Router, so it’s familiar and easy to switch to if needed.
   - It has a great name.
+- [ ] Why Vitest
+  - ...
 
-<p>
-    <a href="https://dripwave.vercel.app/" target="_blank"><img src="./.github/preview-large.png" alt="Desktop" height="400" /></a>
-    <span></span>
-    <a href="https://dripwave.vercel.app/" target="_blank"><img src="./.github/preview-small.png" alt="Mobile" height="400" /></a>
-</p>
+## Accessibility
+
+- [x] Added `aria-label` to the search input to improve screen reader support.
+- [x] Added `aria-live="polite"` to the search results to announce changes to screen readers.
+- [x] Added screen-reader text to replace the snowflake graph for the graph total and individual scores.
+- [x] Added a custom `aria-label` to the market cap to pronounce the value in a better way for screen readers.
+- [x] Added a custom `aria-label` to the total score to pronounce the value in a better way for screen readers.
 
 ## Tests
 
@@ -158,6 +160,8 @@ Anything beyond this would require a more complex structure with a monorepo setu
 - [x] Reduced re-rendering by using `React.memo` and `useMemo` to prevent unnecessary re-renders.
 - [x] Used the [Web Vitals Extension](https://github.com/GoogleChrome/web-vitals-extension) to assess performance and improve metrics throughout development.
 - [ ] Used [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) in the Chrome developer tools to improve performance score from 90 to 100 (screenshot?).
+- [x] Added `<link rel="preconnect" href="https://simplywall.st" crossorigin />` to the head of the document to slightly reduce the time taken to connect to the API.
+- [x] Minified SVG's using [Iconish](https://iconish.benrogerson.dev/) (my own svg minifier) to reduce files sizes.
 
 ### Fonts
 
@@ -167,7 +171,7 @@ Anything beyond this would require a more complex structure with a monorepo setu
 
 ---
 
-Check out the app at: 💹 [fliptrend.benrogerson.dev](https://dripwave.benrogerson.dev/)
+Check out the app at: 💹 [fliptrend.benrogerson.dev](https://fliptrend.benrogerson.dev/)
 
 ## About
 

@@ -30,8 +30,8 @@ const companySchema = z.object({
   }),
   grid: z.object({
     data: z.object({
-      year_founded: z.number(),
-      description: z.string(),
+      // year_founded: z.number(),
+      // description: z.string(),
       // logo_url: z.string(),
       // share_price: z.number(),
       market_cap: z.number(),
@@ -60,7 +60,7 @@ const companySchema = z.object({
         // trading_item_currency_symbol: z.string(),
         // primary_trading_item_currency_iso: z.string(),
       }),
-      main_thumb: z.string(),
+      // main_thumb: z.string(),
       // main_header: z.string(),
     }),
   }),

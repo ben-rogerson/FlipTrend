@@ -11,4 +11,5 @@ export const TYPE_EPISODE = 'episode'
 export const TYPE_GAME = 'game'
 export const TYPE_ALL = 'all'
 
-export const SITE_NAME = 'FlipTrend'
+export const PROJECT_NAME = 'FlipTrend'
+export const PROJECT_LINK = 'https://github.com/ben-rogerson/FlipTrend'

@@ -8,7 +8,9 @@ export const BaseLayout = (props: { children: ReactNode }) => {
       <header>
         <Header />
       </header>
-      <main className="padded-x py-20">{props.children}</main>
+      <main className="padded-x mx-auto max-w-screen-2xl pb-24 pt-5">
+        {props.children}
+      </main>
       <footer>
         <Footer />
       </footer>

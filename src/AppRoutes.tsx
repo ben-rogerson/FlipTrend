@@ -9,18 +9,17 @@ import { findFlagUrlByIso2Code } from 'country-flags-svg'
 import allDataTemp from '@/data/all.json'
 import countryDataTemp from '@/data/au.json'
 import {
-  CompaniesResponse,
-  Company,
+  type CompaniesResponse,
+  type Company,
   companiesResponseSchema,
 } from '@/schemas/companies'
 import { countriesIsoAlpha2 } from '@/data/countryListIsoAlpha2'
 import { useTitle } from '@/hooks/useTitle'
-import { SITE_NAME } from '@/constants'
-import { IconDownArrow } from '@/components/SvgIcons'
-import { api } from '@/api'
-import { parseJson } from '@/utils/Bk/parseJson'
-import { z } from 'zod'
-import { useQuery } from '@tanstack/react-query'
+import { PROJECT_NAME } from '@/constants'
+import { IconDownArrow, IconGem } from '@/components/SvgIcons'
+import { SnowflakeChart } from '@/components/SnowflakeChart'
+import { getRadarColors } from '@/utils/graphs'
+import { abbreviateNumber } from '@/utils/numbers'
 
 // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
 const dataAll: CompaniesResponse = JSON.parse(JSON.stringify(allDataTemp))
@@ -65,38 +64,74 @@ if (!dataAllParsed.success) throw new Error('Failed to parse dataAll')
 //   return queryData
 // }
 
-const getScoreOutOfOneHundred = (score: Company['score']) => {
-  const MAX_SCORE = 30
+const MAX_SCORE = 30
+
+const getScore = (score: Company['score']) => {
   return Math.round((score.data.total / MAX_SCORE) * 100)
 }
 
+const highColor = { h: 90, s: 76, l: 50 }
+const lowColor = { h: 0, s: 76, l: 61 }
+const radarColors = getRadarColors(highColor, lowColor, MAX_SCORE)
+
 const CompanyCard = (props: Company) => {
+  const colorSet = radarColors.get(props.score.data.total)
+  const marketCapData = abbreviateNumber(props.grid.data.market_cap)
+  const score = getScore(props.score)
+
   return (
-    <article className="grid gap-6 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight to-bg p-8">
-      <header className="grid grid-cols-[auto_minmax(0,1fr)_auto] gap-6">
-        <div className="">
-          <div className="text-muted">{props.unique_symbol}</div>
-          <h2 className="truncate text-4xl font-bold tracking-tight">
-            {props.name}
-          </h2>
+    <a
+      href={`https://simplywall.st${props.primary_canonical_url}`}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group/card @container/card"
+    >
+      <article className="group-hover/card:border-light grid h-full gap-3 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight to-bg px-8 py-7 text-lg @sm/card:gap-6 @sm/card:pb-10 @sm/card:pt-7 @sm/card:text-2xl">
+        <header className="grid items-start gap-6 text-center @sm/card:grid-cols-[minmax(0,1fr)_auto] @sm/card:text-left">
+          <div className="grid gap-1">
+            <div className="text-muted">{props.unique_symbol}</div>
+            <h2 className="truncate text-2xl font-bold tracking-tight @xs/card:text-3xl @md/card:text-4xl">
+              {props.name}
+            </h2>
+          </div>
+          <div
+            className="absolute -top-2.5 left-0 w-full text-center @sm/card:relative @sm/card:top-0"
+            aria-label={`${score} out of 100`}
+            title={`${score} out of 100`}
+          >
+            <div
+              className="absolute inset-x-0 -top-1 bottom-0 mx-auto inline-block w-12 rounded-xl @sm/card:w-auto"
+              style={{ backgroundColor: colorSet?.color }}
+            />
+            <div className="relative px-2 font-heading font-bold">{score}</div>
+            {/* ({props.score.data.total}) */}
+          </div>
+        </header>
+        <div className="mx-auto w-full max-w-xs pt-2 md:px-7">
+          <SnowflakeChart graphData={props.score.data} {...colorSet} />
         </div>
-        <div className="text-right">
-          <div className="inline-block rounded-xl bg-button-hover px-2.5 py-1 pb-1">
-            <div className="font-heading font-bold opacity-80">
-              {getScoreOutOfOneHundred(props.score)}
-            </div>
-          </div>{' '}
-          ({props.score.data.total})
+        <div className="absolute inset-x-0 -bottom-4 text-center">
+          <div
+            className="inline-flex items-center gap-1.5 rounded-xl bg-button-hover px-2.5 py-0.5"
+            aria-label={`${props.grid.data.currency_info.reporting_currency_symbol}${marketCapData.abbrWords}`}
+            title={`${props.grid.data.currency_info.reporting_currency_symbol}${marketCapData.abbrWords}`}
+          >
+            <IconGem className="-mt-px text-muted" />
+            {props.grid.data.currency_info.reporting_currency_symbol}
+            {marketCapData.abbrNumber}
+          </div>
         </div>
-      </header>
-      {JSON.stringify(props, null, 2)}
-    </article>
+        {/* {JSON.stringify(props.score.data, null, 2)} */}
+        {/* {JSON.stringify(props, null, 2)} */}
+        {/* {JSON.stringify(props, null, 2)} */}
+      </article>
+    </a>
   )
 }
 
 const CompanyList = (props: { companies: Company[] }) => {
   return (
-    <div className="grid gap-20">
+    <div className="grid gap-x-8 gap-y-12 sm:grid-cols-2 xl:grid-cols-3">
       {props.companies.map(companyData => (
         <CompanyCard key={companyData.id} {...companyData} />
       ))}
@@ -107,8 +142,7 @@ const CompanyList = (props: { companies: Company[] }) => {
 const countryNames = countriesIsoAlpha2()
 
 const Flag = (props: { className?: string }) => {
-  const params = useParams<{ countryId?: string }>()
-  const countryId = params.countryId ? params.countryId.toUpperCase() : ''
+  const countryId = useCountryId()
 
   if (!countryId)
     return (
@@ -125,15 +159,19 @@ const Flag = (props: { className?: string }) => {
   return <img src={flagUrl} className={props.className} alt="Flag" />
 }
 
-const Main = () => {
+const useCountryId = () => {
   const params = useParams<{ countryId?: string }>()
-  const countryId = params.countryId ? params.countryId.toUpperCase() : ''
+  return params.countryId ? params.countryId.toUpperCase() : ''
+}
+
+const Main = () => {
+  const countryId = useCountryId()
 
   const countryName = countryNames.get(countryId)
   const pageTitle = `${countryName ?? 'Global'} Market`
 
-  useTitle(`${pageTitle} | ${SITE_NAME}`)
-  if (params.countryId && !countryName) return <Redirect to="/" />
+  useTitle(`${pageTitle} | ${PROJECT_NAME}`)
+  if (countryId && !countryName) return <Redirect to="/" />
 
   const response = countryId ? dataCountryParsed.data : dataAllParsed.data
 
@@ -158,7 +196,9 @@ const Main = () => {
           <IconDownArrow className="mt-2 text-5xl" aria-hidden />
         </button>
       </div>
-      <div>{response.meta.real_total_records} results</div>
+      <div className="text-muted">
+        {response.meta.real_total_records} results
+      </div>
       <CompanyList companies={response.data} />
     </article>
   )
