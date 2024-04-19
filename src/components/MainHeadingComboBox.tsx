@@ -19,8 +19,8 @@ import {
 import { COUNTRY_CODES_ISOALPHA2 } from '@/data/countryListIsoAlpha2'
 import { useCountryId } from '@/hooks/useCountryId'
 import { MainHeading } from '@/components/MainHeading'
-import { Check } from 'lucide-react'
 import { cn } from '@/utils/styles'
+import { IconCheck } from '@/components/SvgIcons'
 
 type CountryItem = (typeof countryComboboxData)[number]
 
@@ -78,7 +78,7 @@ export const MainHeadingComboBox = () => {
     <Drawer open={open} onOpenChange={setOpen}>
       <DrawerTrigger asChild>{trigger}</DrawerTrigger>
       <DrawerContent>
-        <div className="mt-4 border-t">
+        <div className="mt-4 h-full border-t">
           <CountryList
             selectedCountry={selectedCountry}
             setOpen={setOpen}
@@ -111,7 +111,7 @@ const CountryList = (props: {
   const handleSearch = (search: string) => {
     setFilteredOptions(
       countryComboboxData.filter(option =>
-        option.label.toLowerCase().includes(search.toLowerCase())
+        option.label.toLowerCase().includes(search.trim().toLowerCase())
       )
     )
   }
@@ -120,15 +120,20 @@ const CountryList = (props: {
     <Command shouldFilter={false}>
       <CommandInput
         onValueChange={handleSearch}
-        placeholder="Country search&hellip;"
-        className="py-7 text-2xl"
+        placeholder="Market search&hellip;"
+        className="py-3 text-2xl"
         // eslint-disable-next-line jsx-a11y/no-autofocus -- Okay in this case as it's only focussed when the dropdown is open
         autoFocus
       />
-      <CommandEmpty>No country found.</CommandEmpty>
+      <CommandEmpty className="px-8 py-4 text-2xl">
+        No country found.
+      </CommandEmpty>
       <CommandGroup
         ref={parentRef}
-        className="h-fit max-h-[400px] w-full overflow-auto"
+        className={cn(
+          'h-full max-h-[350px] w-full',
+          virtualOptions.length > 0 ? 'overflow-auto' : 'overflow-hidden'
+        )}
       >
         <div
           className="relative w-full"
@@ -156,9 +161,9 @@ const CountryList = (props: {
                     props.setOpen(false)
                   }}
                 >
-                  <Check
+                  <IconCheck
                     className={cn(
-                      'text-high text-primary mr-2 h-4 w-4',
+                      'mr-2 shrink-0 text-3xl text-primary transition-opacity duration-700',
                       props.selectedCountry.value === virtualItem.value
                         ? 'opacity-100'
                         : 'opacity-0'

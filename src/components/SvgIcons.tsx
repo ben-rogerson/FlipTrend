@@ -113,3 +113,22 @@ export const IconGem = (props: SVGIconProps) => (
     />
   </Icon>
 )
+
+export const IconCheck = (props: SVGIconProps) => (
+  <Icon {...props} viewBox="0 0 24 24">
+    <path d="M20 6 9 17l-5-5" vectorEffect="non-scaling-stroke" />
+  </Icon>
+)
+
+export const IconSearch = (props: SVGIconProps) => (
+  <Icon {...props} viewBox="0 0 24 24">
+    <circle cx="11" cy="11" r="8" vectorEffect="non-scaling-stroke" />
+    <path d="m21 21-4.3-4.3" vectorEffect="non-scaling-stroke" />
+  </Icon>
+)
+
+export const IconClose = (props: SVGIconProps) => (
+  <Icon {...props} viewBox="0 0 24 24">
+    <path d="M18 6 6 18M6 6l12 12" vectorEffect="non-scaling-stroke" />
+  </Icon>
+)

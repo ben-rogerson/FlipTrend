@@ -32,9 +32,6 @@ dependencies:
   lodash:
     specifier: ^4.17.21
     version: 4.17.21
-  lucide-react:
-    specifier: ^0.370.0
-    version: 0.370.0(react@18.2.0)
   mezz:
     specifier: ^0.3.2
     version: 0.3.2(react-dom@18.2.0)(react@18.2.0)
@@ -3845,14 +3842,6 @@ packages:
     dependencies:
       yallist: 4.0.0
     dev: true
-
-  /lucide-react@0.370.0(react@18.2.0):
-    resolution: {integrity: sha512-659R7tNK+QY3Af/hikV/+MdIWOQJ5GDfKdrs+5k08hWPlWNAoshUtvNuGl9PMeC3J1NZ07bUnyWd0eJR2okHOg==}
-    peerDependencies:
-      react: ^16.5.1 || ^17.0.0 || ^18.0.0
-    dependencies:
-      react: 18.2.0
-    dev: false
 
   /magic-string@0.30.9:
     resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}

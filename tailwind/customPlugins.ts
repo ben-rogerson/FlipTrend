@@ -64,12 +64,14 @@ export const scrollStyles = plugin(({ addBase }) => {
    */
   addBase({
     '::-webkit-scrollbar': {
-      width: '10px',
-      height: '10px',
+      width: '8px',
+      height: '8px',
       backgroundColor: 'transparent',
     },
     '::-webkit-scrollbar-thumb': {
-      background: 'var(--color-deep-sky-blue)',
+      borderRadius: '5px',
+      background:
+        'linear-gradient(var(--color-manz), var(--color-deep-sky-blue))',
     },
   })
 })
