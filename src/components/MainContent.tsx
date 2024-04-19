@@ -58,22 +58,39 @@ const SortMarketCap = () => {
   const [sort, setSort] = useSort()
 
   return (
-    <div className="mb-3 grid items-end self-end">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-6">
-        <div className="grid gap-1" aria-hidden>
+    <div className="mb-0.5 grid items-end self-end">
+      <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto]">
+        <div className="hidden gap-1 md:grid" aria-hidden>
           <div className="flex items-center justify-end gap-2">
             <div className="text-xl font-bold uppercase tracking-wide text-muted">
               Market cap
             </div>
             <IconGem className="text-xl text-muted" />
           </div>
-          <div className="text-right font-heading text-3xl font-bold">
-            {sort === 'asc' ? 'Smallest first' : 'Largest first'}
+          <div className="relative text-right font-heading text-3xl font-bold">
+            <div
+              className={cn(
+                'absolute right-0 whitespace-nowrap transition-all duration-200',
+                sort === 'desc' && 'ease translate-y-4 transform opacity-0'
+              )}
+              key="asc"
+            >
+              Smallest first
+            </div>
+            <div
+              className={cn(
+                'whitespace-nowrap transition-all duration-200',
+                sort === 'asc' && 'ease -translate-y-4 transform opacity-0'
+              )}
+              key="desc"
+            >
+              Largest first
+            </div>
           </div>
         </div>
         <div className="-mt-1 grid gap-1">
           <fieldset
-            className="my-1.5 flex w-24 rounded-2xl border-2 p-1.5 text-muted has-[:focus-visible]:border-white"
+            className="my-1.5 grid h-20 w-12 overflow-hidden rounded-2xl border-2 text-muted has-[:focus-visible]:border-white md:flex md:h-14 md:w-24"
             onChange={e => {
               const target = e.target as HTMLInputElement
               if (target.value !== 'desc' && target.value !== 'asc') return
@@ -99,8 +116,8 @@ const SortMarketCap = () => {
             />
             <label
               className={cn(
-                'peer-checked/desc:bg-selected peer-checked/desc:text-active rounded-l-xl',
-                'grid w-1/2 place-content-center'
+                'peer-checked/desc:bg-selected peer-checked/desc:text-active md:rounded-l-xl',
+                'grid w-full place-content-center'
               )}
               htmlFor="sort-desc"
             >
@@ -109,8 +126,8 @@ const SortMarketCap = () => {
             </label>
             <label
               className={cn(
-                'peer-checked/asc:bg-selected peer-checked/asc:text-active rounded-r-xl',
-                'grid w-1/2 place-content-center'
+                'peer-checked/asc:bg-selected peer-checked/asc:text-active md:rounded-r-xl',
+                'grid w-full place-content-center'
               )}
               htmlFor="sort-asc"
             >
@@ -128,6 +145,7 @@ export const MainContent = () => {
   const [country] = useCountry()
 
   const pageTitle = `${country.value === 'ALL' ? 'Global' : country.label} Market Stock Analysis`
+  const seoTitleSuffix = country.value === 'ALL' ? '' : ` in ${country.label}`
 
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
   if (country.value && !country.label) return <Redirect to="/" />
@@ -138,11 +156,12 @@ export const MainContent = () => {
   const isLoadingMore = false
 
   return (
-    <div className="grid select-none gap-8 md:gap-12">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-6">
-        <div className="grid gap-4">
-          <h1 className="font-bold uppercase tracking-wide text-muted">
+    <div className="grid select-none gap-12">
+      <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-4 md:gap-6">
+        <div className="grid h-fit gap-4">
+          <h1 className="text-xl font-bold uppercase tracking-wide text-muted md:text-2xl">
             Company stock analysis
+            <span className="sr-only">{seoTitleSuffix}</span>
           </h1>
           <CountryPicker />
         </div>
