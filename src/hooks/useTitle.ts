@@ -6,6 +6,7 @@ import { useEffect, useRef } from 'react'
  * @example
  * ```tsx
  * useTitle('My Page Title')
+ * console.log(document.title) // => 'My Page Title'
  * ```
  */
 export const useTitle = (title: string) => {

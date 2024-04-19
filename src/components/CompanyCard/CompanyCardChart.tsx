@@ -1,5 +1,4 @@
 import { type Company } from '@/schemas/companies'
-import { getRadarOptions, getSvgCirclePath } from '@/utils/graphs'
 import {
   Chart,
   RadialLinearScale,
@@ -10,7 +9,8 @@ import {
   Legend,
 } from 'chart.js'
 import { Radar } from 'react-chartjs-2'
-import { getRootCssValue } from '../utils/styles'
+import { getRadarOptions, getSvgCirclePath } from '@/utils/graphs'
+import { getRootCssValue } from '@/utils/styles'
 
 Chart.register(
   RadialLinearScale,
@@ -33,10 +33,50 @@ const futureCircle = getSvgCirclePath(125, 125, 110, 198)
 const pastCircle = getSvgCirclePath(125, 125, 110, 125, 'inner')
 const healthCircle = getSvgCirclePath(125, 125, 110, 54, 'inner')
 
+const radarLabels = (
+  <svg
+    viewBox="0 0 250 250"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className="absolute inset-0 top-0"
+    aria-hidden
+  >
+    <path id="valueCurve" d={valueCircle} />
+    <path id="futureCurve" d={futureCircle} />
+    <path id="pastCurve" d={pastCircle} />
+    <path id="healthCurve" d={healthCircle} />
+    <path id="dividendCurve" d={dividendCircle} />
+    <text fill="currentColor" textAnchor="middle" fontSize="20">
+      <textPath xlinkHref="#valueCurve" startOffset="50%">
+        Value
+      </textPath>
+      <textPath xlinkHref="#futureCurve" startOffset="50%">
+        Future
+      </textPath>
+      <textPath
+        xlinkHref="#pastCurve"
+        startOffset="50%"
+        dominantBaseline="hanging"
+      >
+        Past
+      </textPath>
+      <textPath
+        xlinkHref="#healthCurve"
+        startOffset="50%"
+        dominantBaseline="hanging"
+      >
+        Health
+      </textPath>
+      <textPath xlinkHref="#dividendCurve" startOffset="50%">
+        Dividend
+      </textPath>
+    </text>
+  </svg>
+)
+
 const emptyDataArray = Array(5).fill(0)
 
-// million-ignore -- Avoid million.js from processing as it causes the canvas to not render
-export const SnowflakeChart = (props: {
+export const CompanyCardChart = (props: {
   graphData: Company['score']['data']
   backgroundColor?: string
   borderColor?: string
@@ -76,44 +116,7 @@ export const SnowflakeChart = (props: {
       <figcaption className="sr-only">
         {`Total company score: ${props.graphData.total} out of 30. Value: ${props.graphData.value}. Future: ${props.graphData.future}. Past: ${props.graphData.past}. Health: ${props.graphData.health}. Dividend: ${props.graphData.income}`}
       </figcaption>
-      <svg
-        viewBox="0 0 250 250"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-        className="absolute inset-0 top-0"
-        aria-hidden
-      >
-        <path id="valueCurve" d={valueCircle} />
-        <path id="futureCurve" d={futureCircle} />
-        <path id="pastCurve" d={pastCircle} />
-        <path id="healthCurve" d={healthCircle} />
-        <path id="dividendCurve" d={dividendCircle} />
-        <text fill="currentColor" textAnchor="middle" fontSize="20">
-          <textPath xlinkHref="#valueCurve" startOffset="50%">
-            Value
-          </textPath>
-          <textPath xlinkHref="#futureCurve" startOffset="50%">
-            Future
-          </textPath>
-          <textPath
-            xlinkHref="#pastCurve"
-            startOffset="50%"
-            dominantBaseline="hanging"
-          >
-            Past
-          </textPath>
-          <textPath
-            xlinkHref="#healthCurve"
-            startOffset="50%"
-            dominantBaseline="hanging"
-          >
-            Health
-          </textPath>
-          <textPath xlinkHref="#dividendCurve" startOffset="50%">
-            Dividend
-          </textPath>
-        </text>
-      </svg>
+      {radarLabels}
     </figure>
   )
 }

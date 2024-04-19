@@ -5,6 +5,14 @@ interface UseMediaQueryOptions {
   initializeWithValue?: boolean
 }
 
+/**
+ * Hook that listens to a media query, returning a matched boolean value.
+ * @example
+ * ```tsx
+ * const isWide = useMediaQuery('(min-width: 1024px)')
+ * console.log(isWide) // => true
+ * ```
+ */
 export const useMediaQuery = (
   query: string,
   {

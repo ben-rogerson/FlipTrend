@@ -13,7 +13,7 @@ export const Footer = () => {
             href="https://simplywall.st"
             target="_blank"
             rel="noopener noreferrer"
-            className="whitespace-nowrap text-link hover:underline"
+            className="whitespace-nowrap text-link underline decoration-[rgba(255,255,255,.1)] hover:text-white"
           >
             Simply Wall St.
           </a>

@@ -1,4 +1,4 @@
-export const COUNTRY_CODES_ISOALPHA2 = {
+const COUNTRY_CODES_ISOALPHA2 = {
   BD: 'Bangladesh',
   BE: 'Belgium',
   BF: 'Burkina Faso',
@@ -249,7 +249,15 @@ export const COUNTRY_CODES_ISOALPHA2 = {
   UA: 'Ukraine',
   QA: 'Qatar',
   MZ: 'Mozambique',
-}
+} as const
 
-export const getCountries = () =>
-  new Map(Object.entries(COUNTRY_CODES_ISOALPHA2))
+export type CountryItem = (typeof countryPickerData)[number]
+
+/**
+ * Country data for the country picker
+ * Includes all countries and territories in the iso 3166-1 alpha-2 format
+ */
+export const countryPickerData = Object.entries({
+  ...{ ALL: 'All countries' },
+  ...COUNTRY_CODES_ISOALPHA2,
+}).map(([value, label]) => ({ value: value, label }))

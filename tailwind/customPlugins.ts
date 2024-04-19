@@ -58,11 +58,14 @@ export const bodyStyles = plugin(({ addBase }) => {
 })
 
 export const scrollStyles = plugin(({ addBase }) => {
-  /**
-   * Styled scroll bars.
-   * Uses non-standard `::-webkit` as `scrollbar-color` isn't supported in Safari yet.
-   */
   addBase({
+    ':root': {
+      scrollBehavior: 'smooth',
+    },
+    /**
+     * Styled scroll bars.
+     * Uses non-standard `::-webkit` as `scrollbar-color` isn't supported in Safari yet.
+     */
     '::-webkit-scrollbar': {
       width: '8px',
       height: '8px',
@@ -108,7 +111,7 @@ export const customFontStyles = plugin(({ addBase }) => {
       {
         ...baseFontStyles,
         fontFamily: 'Apercu',
-        src: 'local("Apercu Regular"), url("/apercu-regular.woff2") format("woff2")',
+        src: 'local("Apercu Regular"), url("/fonts/apercu-regular.woff2") format("woff2")',
         unicodeRange:
           'U+0020-7E, U+00A9, U+00AE' /* Copyright and Registered Trademark extras */,
       },
@@ -116,7 +119,7 @@ export const customFontStyles = plugin(({ addBase }) => {
         ...baseFontStyles,
         fontFamily: 'Apercu',
         fontWeight: 'bold',
-        src: 'local("Apercu Bold"), url("/apercu-bold.woff2") format("woff2")',
+        src: 'local("Apercu Bold"), url("/fonts/apercu-bold.woff2") format("woff2")',
       },
     ],
   })

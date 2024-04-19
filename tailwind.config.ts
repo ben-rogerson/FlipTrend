@@ -43,13 +43,14 @@ export default {
         white: 'var(--color-white)',
         'button-hover': 'var(--color-cyprus-light)',
         page: 'var(--color-dark-green)',
-        border: 'var(--color-cyprus-light)',
+        selected: 'var(--color-cyprus)',
       },
       textColor: {
         white: 'var(--color-white)',
         muted: 'var(--color-link-water)',
         transparent: 'transparent',
         link: 'var(--color-deep-sky-blue)',
+        active: 'var(--color-deep-sky-blue)',
       },
       gradientColorStops: {
         'bg-highlight': 'var(--color-sapphire)',
