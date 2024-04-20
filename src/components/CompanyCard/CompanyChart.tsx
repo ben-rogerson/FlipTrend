@@ -76,7 +76,7 @@ const radarLabels = (
 
 const emptyDataArray = Array(5).fill(0)
 
-export const CompanyCardChart = (props: {
+export const CompanyChart = (props: {
   graphData: Company['score']['data']
   backgroundColor?: string
   borderColor?: string

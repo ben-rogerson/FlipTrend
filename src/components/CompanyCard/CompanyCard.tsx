@@ -1,6 +1,6 @@
 import { type Company } from '@/schemas/companies'
 import { IconGem } from '@/components/SvgIcons'
-import { CompanyCardChart } from '@/components/CompanyCard/CompanyCardChart'
+import { CompanyChart } from '@/components/CompanyCard/CompanyChart'
 import { getRadarColors } from '@/utils/graphs'
 import { getAbbreviatedNumber } from '@/utils/numbers'
 
@@ -50,7 +50,7 @@ export const CompanyCard = (props: Company) => {
           </div>
         </header>
         <div className="mx-auto w-full max-w-xs select-none pt-2 md:px-7">
-          <CompanyCardChart graphData={props.score.data} {...colorSet} />
+          <CompanyChart graphData={props.score.data} {...colorSet} />
         </div>
         <div className="group absolute inset-x-0 -bottom-4 text-center">
           <div className="pointer-events-none mx-auto mb-1 hidden w-fit whitespace-nowrap rounded-lg border bg-background px-3.5 py-2 text-lg duration-300 ease-out animate-in fade-in-0 group-hover:block @sm/card:slide-in-from-bottom-1">

@@ -1,7 +1,7 @@
 import { IconLoader } from '@/components/SvgIcons'
 import { cn } from '@/utils/styles'
 
-export const LoaderMore = (props: { isLoading: boolean }) => (
+export const LoaderFetch = (props: { isLoading: boolean }) => (
   <div className="@container/loader" aria-hidden>
     <div
       className={cn(

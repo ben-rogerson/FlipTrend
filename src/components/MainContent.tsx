@@ -1,9 +1,9 @@
 import { COUNTRY_VALUE_ALL, PROJECT_NAME } from '@/constants'
 import { useTitle } from '@/hooks/useTitle'
-import { CompanyCard } from '@/components/CompanyCard/CompanyCard'
-import { LoaderMore } from '@/components/Loader/LoaderMore'
-import { CountryPicker } from '@/components/CountryPicker/CountryPicker'
+import { LoaderFetch } from '@/components/Loader/LoaderFetch'
 import { LoaderCard } from '@/components/Loader/LoaderCard'
+import { CompanyCard } from '@/components/CompanyCard/CompanyCard'
+import { CountryPicker } from '@/components/CountryPicker/CountryPicker'
 import { SortMarketCap } from '@/components/SortMarketCap'
 import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
@@ -66,7 +66,7 @@ export const MainContent = () => {
           ))}
         </div>
         <div ref={data.totalFetched < data.totalDBRowCount ? observeRef : null}>
-          <LoaderMore isLoading={data.isFetchingNextPage} />
+          <LoaderFetch isLoading={data.isFetchingNextPage} />
         </div>
       </article>
     </div>
