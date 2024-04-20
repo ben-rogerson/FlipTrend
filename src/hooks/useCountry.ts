@@ -1,6 +1,7 @@
 import { useLocation, useParams, useSearch } from 'wouter'
 import { countryPickerData, type CountryItem } from '@/data/countries'
 import { type Filters } from '@/schemas/filters'
+import { COUNTRY_VALUE_ALL } from '@/constants'
 
 /**
  * Get or set the country in the URL
@@ -34,7 +35,7 @@ export const useCountry = (): [
   return [
     currentCountry as CountryItem,
     (countryId: string) => {
-      const loc = countryId === 'all' ? '/' : `/${countryId}`
+      const loc = countryId === COUNTRY_VALUE_ALL ? '/' : `/${countryId}`
       const newLocation = [loc, searchParams.toString()]
         .filter(Boolean)
         .join('?')

@@ -1,3 +1,4 @@
+import { COUNTRY_VALUE_ALL } from '@/constants'
 import { type CountryItem } from '@/data/countries'
 import { type Filters } from '@/schemas/filters'
 
@@ -25,7 +26,7 @@ export const api = {
         size: size,
         state: 'read',
         rules: [
-          country === 'all'
+          country === COUNTRY_VALUE_ALL
             ? null
             : ['aor', [['country_name', 'in', [country]]]],
           ['order_by', 'market_cap', sort],

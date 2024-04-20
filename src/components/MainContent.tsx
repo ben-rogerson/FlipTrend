@@ -1,4 +1,4 @@
-import { PROJECT_NAME } from '@/constants'
+import { COUNTRY_VALUE_ALL, PROJECT_NAME } from '@/constants'
 import { useTitle } from '@/hooks/useTitle'
 import { CompanyCard } from '@/components/CompanyCard/CompanyCard'
 import { LoaderMore } from '@/components/Loader/LoaderMore'
@@ -17,9 +17,11 @@ export const MainContent = () => {
 
   const data = useCountryData(isIntersecting)
 
-  const pageTitle = `${data.country.value === 'all' ? 'Global' : data.country.label[0]} Market Stock Analysis`
+  const pageTitle = `${data.country.value === COUNTRY_VALUE_ALL ? 'Global' : data.country.label[0]} Market Stock Analysis`
   const seoTitleSuffix =
-    data.country.value === 'all' ? '' : ` in ${data.country.label[0]}`
+    data.country.value === COUNTRY_VALUE_ALL
+      ? ''
+      : ` in ${data.country.label[0]}`
 
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
 

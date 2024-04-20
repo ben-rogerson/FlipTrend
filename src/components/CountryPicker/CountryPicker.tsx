@@ -9,6 +9,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
+import { COUNTRY_VALUE_ALL } from '@/constants'
 
 const LazyCountryList = lazy(() =>
   import('@/components/CountryPicker/CountryList').then(module => ({
@@ -25,7 +26,11 @@ export const CountryPicker = () => {
     <button type="button" className="group/button cursor-default text-left">
       <CountryDropdownTrigger
         key={country.value} // Trigger animation
-        pageTitle={country.value === 'all' ? 'Global' : country.label[0] ?? ''}
+        pageTitle={
+          country.value === COUNTRY_VALUE_ALL
+            ? 'Global'
+            : country.label[0] ?? ''
+        }
       />
     </button>
   )

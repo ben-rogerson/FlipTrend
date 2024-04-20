@@ -1,3 +1,5 @@
+import { COUNTRY_VALUE_ALL } from '@/constants'
+
 const COUNTRY_CODES_ISOALPHA2 = {
   ar: ['Argentina'],
   au: ['Australia'],
@@ -95,10 +97,10 @@ export type CountryCode = keyof typeof COUNTRY_CODES_ISOALPHA2
  * Includes all countries and territories in the iso 3166-1 alpha-2 format
  */
 export const countryPickerData = Object.entries({
-  ...{ all: ['All countries'] },
+  ...{ [COUNTRY_VALUE_ALL]: ['Global'] },
   ...COUNTRY_CODES_ISOALPHA2,
 }).map(([value, label]) => ({ value: value, label })) as Array<{
-  value: CountryCode | 'all'
+  value: CountryCode | typeof COUNTRY_VALUE_ALL
   label: string[]
 }>
 

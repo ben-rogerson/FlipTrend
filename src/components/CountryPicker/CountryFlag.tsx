@@ -1,10 +1,11 @@
 import { findFlagUrlByIso2Code } from 'country-flags-svg'
 import { useCountry } from '@/hooks/useCountry'
+import { COUNTRY_VALUE_ALL } from '@/constants'
 
 export const CountryFlag = (props: { className?: string }) => {
   const [country] = useCountry()
 
-  if (country.value === 'all')
+  if (country.value === COUNTRY_VALUE_ALL)
     return (
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/d/d4/World_Flag_%282004%29.svg"
