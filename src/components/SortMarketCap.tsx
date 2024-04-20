@@ -23,7 +23,7 @@ export const SortMarketCap = () => {
               )}
               key="asc"
             >
-              Lowest first
+              Low to High
             </div>
             <div
               className={cn(
@@ -32,7 +32,7 @@ export const SortMarketCap = () => {
               )}
               key="desc"
             >
-              Largest first
+              High to Low
             </div>
           </div>
         </div>
@@ -70,7 +70,7 @@ export const SortMarketCap = () => {
               htmlFor="sort-desc"
             >
               <IconArrowDown className="text-2xl" />
-              <div className="sr-only">Sort descending</div>
+              <div className="sr-only">Sort high to low</div>
             </label>
             <label
               className={cn(
@@ -80,7 +80,7 @@ export const SortMarketCap = () => {
               htmlFor="sort-asc"
             >
               <IconArrowUp className="text-2xl" />
-              <div className="sr-only">Sort ascending</div>
+              <div className="sr-only">Sort low to high</div>
             </label>
           </fieldset>
         </div>
