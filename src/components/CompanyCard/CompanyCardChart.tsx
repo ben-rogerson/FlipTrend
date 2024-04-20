@@ -1,4 +1,3 @@
-import { type Company } from '@/schemas/companies'
 import {
   Chart,
   RadialLinearScale,
@@ -11,6 +10,7 @@ import {
 import { Radar } from 'react-chartjs-2'
 import { getRadarOptions, getSvgCirclePath } from '@/utils/graphs'
 import { getRootCssValue } from '@/utils/styles'
+import { type Company } from '@/schemas/companies'
 
 Chart.register(
   RadialLinearScale,
@@ -114,7 +114,14 @@ export const CompanyCardChart = (props: {
         className="p-[12%]"
       />
       <figcaption className="sr-only">
-        {`Total company score: ${props.graphData.total} out of 30. Value: ${props.graphData.value}. Future: ${props.graphData.future}. Past: ${props.graphData.past}. Health: ${props.graphData.health}. Dividend: ${props.graphData.income}`}
+        {[
+          `Total company score: ${props.graphData.total} out of 30.`,
+          `Value: ${props.graphData.value}.`,
+          `Future: ${props.graphData.future}.`,
+          `Past: ${props.graphData.past}.`,
+          `Health: ${props.graphData.health}.`,
+          `Dividend: ${props.graphData.income}.`,
+        ].join(' ')}
       </figcaption>
       {radarLabels}
     </figure>

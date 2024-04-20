@@ -8,30 +8,14 @@ import { useCountry } from '@/hooks/useCountry'
 import { useSort } from '@/hooks/useSort'
 import { api } from '@/api'
 import { type CountryItem } from '@/data/countries'
-import { type UrlParams } from '@/schemas/urlParams'
+import { type Filters } from '@/schemas/filters'
 
 const FETCH_SIZE = 12
 
-const fetchData = async (
-  offset: number,
-  size: number,
-  sort: UrlParams['sort'],
-  country: CountryItem['value']
-) => {
-  const response = await api.fetchCompanies(offset, size, sort, country)
-
-  if (!response.ok) throw new Error('Failed to fetch company data')
-
-  const companies = (await response.json()) as CompaniesResponse
-
-  // Verify and trim the data
-  const dataAllParsed = companiesResponseSchema.safeParse(companies)
-  if (!dataAllParsed.success)
-    throw new Error('The stock data couldn’t be verified')
-
-  return dataAllParsed.data
-}
-
+/**
+ * Fetch and paginate company data based on the country and sort.
+ * @param isEnabled - Whether the hook should fetch more data.
+ */
 export const useCountryData = (isEnabled: boolean) => {
   const [sort] = useSort()
   const [country] = useCountry()
@@ -77,4 +61,24 @@ export const useCountryData = (isEnabled: boolean) => {
   const totalFetched = flatData.length
 
   return { flatData, country, totalDBRowCount, totalFetched, ...queryData }
+}
+
+const fetchData = async (
+  offset: number,
+  size: number,
+  sort: Filters['sort'],
+  country: CountryItem['value']
+) => {
+  const response = await api.fetchCompanies(offset, size, sort, country)
+
+  if (!response.ok) throw new Error('Failed to fetch company data')
+
+  const companies = (await response.json()) as CompaniesResponse
+
+  // Verify and trim the data
+  const dataAllParsed = companiesResponseSchema.safeParse(companies)
+  if (!dataAllParsed.success)
+    throw new Error('The stock data couldn’t be verified')
+
+  return dataAllParsed.data
 }

@@ -8,7 +8,7 @@ export const CountryFlag = (props: { className?: string }) => {
     return (
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/d/d4/World_Flag_%282004%29.svg"
-        alt="" // Avoid announcing
+        alt="" // Avoid announcing as it conflicts with the country name
         className={props.className}
         width="1000"
         height="600"
@@ -22,7 +22,7 @@ export const CountryFlag = (props: { className?: string }) => {
     <img
       src={flagUrl}
       className={props.className}
-      alt="" // Avoid announcing
+      alt="" // Avoid announcing as it conflicts with the country name
       width="1000"
       height="600"
     />

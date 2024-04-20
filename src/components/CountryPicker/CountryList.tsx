@@ -8,9 +8,9 @@ import {
   CommandItem,
   CommandList,
 } from '@/components/ui/command'
-import { type CountryItem, countryPickerData } from '@/data/countries'
-import { cn } from '@/utils/styles'
 import { IconCheck } from '@/components/SvgIcons'
+import { cn } from '@/utils/styles'
+import { type CountryItem, countryPickerData } from '@/data/countries'
 
 export const CountryList = (props: {
   country: CountryItem

@@ -1,14 +1,14 @@
 import { Suspense, lazy, useState } from 'react'
+import { useCountry } from '@/hooks/useCountry'
 import { useMediaQuery } from '@/hooks/useMediaQuery'
+import { LoaderCard } from '@/components/Loader/LoaderCard'
+import { CountryDropdownTrigger } from '@/components/CountryPicker/CountryPickerTrigger'
 import { Drawer, DrawerContent, DrawerTrigger } from '@/components/ui/drawer'
 import {
   Popover,
   PopoverContent,
   PopoverTrigger,
 } from '@/components/ui/popover'
-import { useCountry } from '@/hooks/useCountry'
-import { CountryDropdownTrigger } from '@/components/CountryPicker/CountryPickerTrigger'
-import { LoaderCard } from '@/components/Loader/LoaderCard'
 
 const LazyCountryList = lazy(() =>
   import('@/components/CountryPicker/CountryList').then(module => ({

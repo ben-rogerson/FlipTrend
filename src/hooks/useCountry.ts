@@ -1,6 +1,6 @@
 import { useLocation, useParams, useSearch } from 'wouter'
-import { type UrlParams } from '@/schemas/urlParams'
 import { countryPickerData, type CountryItem } from '@/data/countries'
+import { type Filters } from '@/schemas/filters'
 
 /**
  * Get or set the country in the URL
@@ -17,13 +17,16 @@ export const useCountry = (): [
 ] => {
   const [, setLocation] = useLocation()
   const searchParams = new URLSearchParams(useSearch())
-  const params = useParams<UrlParams>()
-  const urlCountryId = params.countryId ? params.countryId.toLowerCase() : '' // TODO: Validate?
+  const params = useParams<Filters>()
+  const urlCountryId = params.countryId ? params.countryId.toLowerCase() : ''
+
+  // Validate url param against the country picker data
   const currentCountry = urlCountryId
     ? countryPickerData.find(country => country.value === urlCountryId)
     : countryPickerData[0]
 
   // Redirect if the country is not found
+  // TODO: Add a custom error instead of redirecting
   if (urlCountryId && !currentCountry) {
     setLocation('/')
   }

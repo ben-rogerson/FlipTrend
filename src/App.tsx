@@ -1,7 +1,7 @@
 import { ErrorBoundary } from 'react-error-boundary'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { AppRoutes } from '@/AppRoutes'
+import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { BaseLayout } from '@/layouts/BaseLayout'
 
 const queryClient = new QueryClient()

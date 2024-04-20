@@ -5,9 +5,10 @@ import { LoaderMore } from '@/components/Loader/LoaderMore'
 import { CountryPicker } from '@/components/CountryPicker/CountryPicker'
 import { LoaderCard } from '@/components/Loader/LoaderCard'
 import { SortMarketCap } from '@/components/SortMarketCap'
-import { cn } from '@/utils/styles'
+import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import { useCountryData } from '@/hooks/useCountryData'
+import { cn } from '@/utils/styles'
 
 export const MainContent = () => {
   const [observeRef, isIntersecting] = useIntersectionObserver({
@@ -39,8 +40,8 @@ export const MainContent = () => {
         {response.meta.real_total_records} results
       </div> */}
 
-        {/* // TODO: Error card */}
-        {data.error && <div>Error: {data.error.message}</div>}
+        {/* // TODO: Style error card */}
+        <ErrorDisplay error={data.error?.message} />
 
         {data.flatData.length === 0 && !data.isFetching && (
           <div>

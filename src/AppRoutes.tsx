@@ -1,5 +1,5 @@
-import { ErrorBoundary } from 'react-error-boundary'
 import { Route, Switch } from 'wouter'
+import { ErrorBoundary } from 'react-error-boundary'
 import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { MainContent } from '@/components/MainContent'
 

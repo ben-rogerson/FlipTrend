@@ -1,5 +1,5 @@
 import { type CountryItem } from '@/data/countries'
-import { type UrlParams } from '@/schemas/urlParams'
+import { type Filters } from '@/schemas/filters'
 
 const SWS_API_URL = 'https://simplywall.st/api/grid/filter?include=grid,score'
 
@@ -7,7 +7,7 @@ export const api = {
   fetchCompanies: (
     offset: number,
     size: number,
-    sort: UrlParams['sort'],
+    sort: Filters['sort'],
     country: CountryItem['value']
   ) =>
     fetch(SWS_API_URL, {

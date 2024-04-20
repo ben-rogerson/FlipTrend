@@ -1,6 +1,6 @@
+import { Link } from 'wouter'
 import { Icon, IconGithub } from '@/components/SvgIcons'
 import { PROJECT_LINK, PROJECT_NAME } from '@/constants'
-import { Link } from 'wouter'
 
 const Logo = () => (
   <Icon

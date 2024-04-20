@@ -1,4 +1,5 @@
 export const ErrorDisplay = (props: { error: unknown }) => {
+  if (!props.error) return
   const msg =
     props.error instanceof Error ? props.error.message : String(props.error)
   return (

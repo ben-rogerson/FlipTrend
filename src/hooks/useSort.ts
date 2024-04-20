@@ -1,6 +1,6 @@
 import { useLocation, useSearch } from 'wouter'
 import { PARAM_SORT } from '@/constants'
-import { type UrlParams } from '@/schemas/urlParams'
+import { type Filters } from '@/schemas/filters'
 
 const DEFAULT_SORT = 'desc'
 
@@ -14,14 +14,14 @@ const DEFAULT_SORT = 'desc'
  * ```
  */
 export const useSort = (): [
-  sort: UrlParams['sort'],
-  setSort: (setSort?: UrlParams['sort']) => void,
+  sort: Filters['sort'],
+  setSort: (setSort?: Filters['sort']) => void,
 ] => {
   const [location, setLocation] = useLocation()
   const searchParams = new URLSearchParams(useSearch())
 
   return [
-    (searchParams.get('sort') ?? DEFAULT_SORT) as UrlParams['sort'],
+    (searchParams.get('sort') ?? DEFAULT_SORT) as Filters['sort'],
     setSort => {
       if (setSort) {
         if (setSort === DEFAULT_SORT) {
