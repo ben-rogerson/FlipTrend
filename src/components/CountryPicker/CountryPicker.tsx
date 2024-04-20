@@ -25,7 +25,7 @@ export const CountryPicker = () => {
     <button type="button" className="group/button cursor-default text-left">
       <CountryDropdownTrigger
         key={country.value} // Trigger animation
-        pageTitle={country.value === 'all' ? 'Global' : country.label}
+        pageTitle={country.value === 'all' ? 'Global' : country.label[0] ?? ''}
       />
     </button>
   )

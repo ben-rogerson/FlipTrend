@@ -88,7 +88,7 @@ export const CountryList = (props: {
                         : 'opacity-0'
                     )}
                   />
-                  <div className="truncate">{virtualItem.label}</div>
+                  <div className="truncate">{virtualItem.label[0]}</div>
                 </CommandItem>
               )
             })}

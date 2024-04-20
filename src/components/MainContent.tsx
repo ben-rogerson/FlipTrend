@@ -16,9 +16,9 @@ export const MainContent = () => {
 
   const data = useCountryData(isIntersecting)
 
-  const pageTitle = `${data.country.value === 'all' ? 'Global' : data.country.label} Market Stock Analysis`
+  const pageTitle = `${data.country.value === 'all' ? 'Global' : data.country.label[0]} Market Stock Analysis`
   const seoTitleSuffix =
-    data.country.value === 'all' ? '' : ` in ${data.country.label}`
+    data.country.value === 'all' ? '' : ` in ${data.country.label[0]}`
 
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
 
