@@ -30,17 +30,13 @@ export const CountryList = (props: {
 
   const virtualOptions = virtualizer.getVirtualItems()
 
-  const handleSearch = (search: string) => {
-    const options = search.trim().toLowerCase()
-    if (!options) {
-      setFilteredOptions(countryPickerData)
-      return
-    }
-    setFilteredOptions(
-      filteredOptions.filter(option =>
-        option.label.toLowerCase().includes(options)
-      )
+  const handleSearch = (rawKeywords: string) => {
+    const keywords = rawKeywords.trim().toLowerCase()
+    const results = countryPickerData.filter(option =>
+      option.label.some(l => l.toLowerCase().includes(keywords))
     )
+    if (results.length === 0) return
+    setFilteredOptions(results)
   }
 
   return (
