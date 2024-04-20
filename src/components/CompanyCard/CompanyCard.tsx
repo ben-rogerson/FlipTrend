@@ -33,36 +33,38 @@ export const CompanyCard = (props: Company) => {
               {props.name}
             </h2>
           </div>
-          <div
-            className="absolute -top-2.5 left-0 w-full text-center @sm/card:relative @sm/card:top-0"
-            aria-label={`${score} out of 100`}
-            title={`${score} out of 100`}
-          >
+          <div className="absolute -top-2.5 left-0 w-full text-center @sm/card:relative @sm/card:top-0">
             <div
               className="absolute inset-x-0 -top-1 bottom-0 mx-auto inline-block w-12 rounded-xl @sm/card:w-auto"
               style={{ backgroundColor: colorSet?.color }}
             />
-            <div className="relative px-2 font-heading font-bold">{score}</div>
-            {/* ({props.score.data.total}) */}
+            <div
+              className="peer relative px-2 font-heading font-bold"
+              aria-hidden
+            >
+              {score}
+            </div>
+            <div className="pointer-events-none absolute left-1/2 mt-1 hidden w-fit -translate-x-1/2 whitespace-nowrap rounded-lg border bg-background px-3.5 py-2 text-lg duration-300 ease-out fade-in-0 peer-hover:block @sm/card:left-auto @sm/card:right-0 @sm/card:translate-x-0 @sm/card:animate-in @sm/card:slide-in-from-top-1">
+              Snowflake Score {score}/100
+            </div>
           </div>
         </header>
         <div className="mx-auto w-full max-w-xs select-none pt-2 md:px-7">
           <CompanyCardChart graphData={props.score.data} {...colorSet} />
         </div>
-        <div className="absolute inset-x-0 -bottom-4 text-center">
+        <div className="group absolute inset-x-0 -bottom-4 text-center">
+          <div className="pointer-events-none mx-auto mb-1 hidden w-fit whitespace-nowrap rounded-lg border bg-background px-3.5 py-2 text-lg duration-300 ease-out animate-in fade-in-0 group-hover:block @sm/card:slide-in-from-bottom-1">
+            {`Market cap ${props.grid.data.currency_info.reporting_currency_symbol}${marketCapData.abbrWords}`}
+          </div>
           <div
-            className="inline-flex items-center gap-1.5 rounded-xl bg-button-hover px-2.5 py-0.5"
-            aria-label={`${props.grid.data.currency_info.reporting_currency_symbol}${marketCapData.abbrWords}`}
-            title={`${props.grid.data.currency_info.reporting_currency_symbol}${marketCapData.abbrWords}`}
+            className="peer inline-flex items-center gap-1.5 rounded-xl bg-button-hover px-2.5 py-0.5"
+            aria-hidden
           >
             <IconGem className="-mt-px text-muted" />
             {props.grid.data.currency_info.reporting_currency_symbol}
             {marketCapData.abbrNumber}
           </div>
         </div>
-        {/* {JSON.stringify(props.score.data, null, 2)} */}
-        {/* {JSON.stringify(props, null, 2)} */}
-        {/* {JSON.stringify(props, null, 2)} */}
       </article>
     </a>
   )
