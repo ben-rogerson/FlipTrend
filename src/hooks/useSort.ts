@@ -15,7 +15,7 @@ const DEFAULT_SORT = 'desc'
  */
 export const useSort = (): [
   sort: UrlParams['sort'],
-  setSort: (setSort: UrlParams['sort']) => void,
+  setSort: (setSort?: UrlParams['sort']) => void,
 ] => {
   const [location, setLocation] = useLocation()
   const searchParams = new URLSearchParams(useSearch())

@@ -1,4 +1,4 @@
 export interface UrlParams {
   countryId?: string
-  sort?: 'asc' | 'desc'
+  sort: 'asc' | 'desc'
 }

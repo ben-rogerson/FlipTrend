@@ -4,7 +4,7 @@ import { useCountry } from '@/hooks/useCountry'
 export const CountryFlag = (props: { className?: string }) => {
   const [country] = useCountry()
 
-  if (country.value === 'ALL')
+  if (country.value === 'all')
     return (
       <img
         src="https://upload.wikimedia.org/wikipedia/commons/d/d4/World_Flag_%282004%29.svg"

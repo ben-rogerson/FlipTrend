@@ -3,7 +3,6 @@ import { IconGem } from '@/components/SvgIcons'
 import { CompanyCardChart } from '@/components/CompanyCard/CompanyCardChart'
 import { getRadarColors } from '@/utils/graphs'
 import { getAbbreviatedNumber } from '@/utils/numbers'
-import { type CSSProperties } from 'react'
 
 const MAX_SCORE = 30
 
@@ -14,7 +13,7 @@ const highColor = { h: 90, s: 76, l: 50 }
 const lowColor = { h: 0, s: 76, l: 61 }
 const radarColors = getRadarColors(highColor, lowColor, MAX_SCORE)
 
-export const CompanyCard = (props: Company & { style: CSSProperties }) => {
+export const CompanyCard = (props: Company) => {
   const colorSet = radarColors.get(props.score.data.total)
   const marketCapData = getAbbreviatedNumber(props.grid.data.market_cap)
   const score = getScore(props.score)
@@ -24,8 +23,7 @@ export const CompanyCard = (props: Company & { style: CSSProperties }) => {
       href={`https://simplywall.st${props.primary_canonical_url}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="group/card block duration-1000 ease-out animate-in fade-in-0 fill-mode-backwards @container/card"
-      style={props.style}
+      className="group/card block @container/card"
     >
       <article className="grid h-full gap-3 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight px-8 py-7 text-lg group-hover/card:border-light @sm/card:gap-6 @sm/card:pb-10 @sm/card:pt-7 @sm/card:text-2xl">
         <header className="grid items-start text-center @sm/card:grid-cols-[minmax(0,1fr)_auto] @sm/card:text-left">

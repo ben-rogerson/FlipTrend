@@ -11,14 +11,14 @@ export const CountryDropdownTrigger = (props: { pageTitle: string }) => (
         'duration-500 ease-out animate-in fade-in-0 slide-in-from-left-2'
       )}
     >
-      <div className="absolute -inset-1 -left-3 -top-2 -z-1 hidden rounded-full group-hover/button:bg-button-hover md:block" />
+      <div className="absolute -inset-x-4 inset-y-0 -z-1 hidden rounded-full group-hover/button:bg-button-hover md:block" />
       <div
         className="bg-selected relative -ml-3 h-[1em] w-[1em] shrink-0 overflow-hidden rounded-50 border-2 text-5xl shadow-inner @lg/trigger:border-4 @lg/trigger:text-6xl @5xl/trigger:text-[5rem]"
         aria-hidden
       >
         <CountryFlag className="h-full object-cover" />
       </div>
-      <div className="text-balance @3xl/trigger:truncate">
+      <div className="text-balance @lg/trigger:leading-normal @3xl/trigger:truncate">
         {props.pageTitle}
         <IconDropDown className="mx-2.5 inline-block text-[.7em]" aria-hidden />
       </div>

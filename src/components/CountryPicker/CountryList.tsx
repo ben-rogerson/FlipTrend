@@ -31,9 +31,14 @@ export const CountryList = (props: {
   const virtualOptions = virtualizer.getVirtualItems()
 
   const handleSearch = (search: string) => {
+    const options = search.trim().toLowerCase()
+    if (!options) {
+      setFilteredOptions(countryPickerData)
+      return
+    }
     setFilteredOptions(
       filteredOptions.filter(option =>
-        option.label.toLowerCase().includes(search.trim().toLowerCase())
+        option.label.toLowerCase().includes(options)
       )
     )
   }
@@ -74,8 +79,8 @@ export const CountryList = (props: {
                   }}
                   key={virtualItem.value}
                   value={virtualItem.value}
-                  onSelect={(value: CountryItem['value']) => {
-                    props.setCountry(value)
+                  onSelect={value => {
+                    props.setCountry(value as CountryItem['value'])
                     props.setOpen(false)
                   }}
                 >

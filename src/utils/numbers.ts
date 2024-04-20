@@ -24,5 +24,10 @@ export const getAbbreviatedNumber = (num: number) => {
     return { abbrNumber: `${abbrNum}m`, abbrWords: `${abbrNum} million` }
   }
 
+  if (num >= 1_000) {
+    const abbrNum = (num / 1_000).toFixed(1)
+    return { abbrNumber: `${abbrNum}k`, abbrWords: `${abbrNum} thousand` }
+  }
+
   return { abbrNumber: num.toString(), abbrWords: num.toString() }
 }

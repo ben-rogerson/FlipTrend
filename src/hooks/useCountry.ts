@@ -13,22 +13,25 @@ import { countryPickerData, type CountryItem } from '@/data/countries'
  */
 export const useCountry = (): [
   country: CountryItem,
-  setCountry: (countryId: string) => void,
+  setCountry: (countryId: CountryItem['value']) => void,
 ] => {
   const [, setLocation] = useLocation()
   const searchParams = new URLSearchParams(useSearch())
   const params = useParams<UrlParams>()
-  const urlCountryId = params.countryId ? params.countryId.toUpperCase() : '' // TODO: Validate?
-  const currentCountry = (
-    urlCountryId
-      ? countryPickerData.find(country => country.value === urlCountryId)
-      : countryPickerData[0]
-  ) as CountryItem
+  const urlCountryId = params.countryId ? params.countryId.toLowerCase() : '' // TODO: Validate?
+  const currentCountry = urlCountryId
+    ? countryPickerData.find(country => country.value === urlCountryId)
+    : countryPickerData[0]
+
+  // Redirect if the country is not found
+  if (urlCountryId && !currentCountry) {
+    setLocation('/')
+  }
 
   return [
-    currentCountry,
+    currentCountry as CountryItem,
     (countryId: string) => {
-      const loc = countryId === 'ALL' ? '/' : `/${countryId.toLowerCase()}`
+      const loc = countryId === 'all' ? '/' : `/${countryId}`
       const newLocation = [loc, searchParams.toString()]
         .filter(Boolean)
         .join('?')

@@ -73,7 +73,7 @@ export const companiesResponseSchema = z.object({
     real_total_records: z.number(),
     // state: z.string(),
     // noResultIfLimit: z.boolean(),
-    pe: z.number(),
+    // pe: z.number().nullable(),
     // return_1yr_abs: z.number(),
     // return_7d: z.number(),
   }),
