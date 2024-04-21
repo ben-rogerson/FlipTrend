@@ -8,14 +8,12 @@ import { SortMarketCap } from '@/components/SortMarketCap'
 import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import { useCompanyData } from '@/hooks/useCompanyData'
-import { useGetCompanyCardHeightStyle } from '@/hooks/useGetCompanyCardHeightStyle'
 import { useTitle } from '@/hooks/useTitle'
 import { cn } from '@/utils/styles'
 
 export const MainContent = () => {
   const observeRef = useRef<HTMLDivElement>(null)
   const observer = useIntersectionObserver(observeRef)
-  const { companyListRef, companyCardStyle } = useGetCompanyCardHeightStyle()
   const data = useCompanyData()
 
   useEffect(() => {
@@ -52,7 +50,6 @@ export const MainContent = () => {
           )}
           role="feed"
           aria-busy={data.isFetching || data.isFetchingNextPage}
-          ref={companyListRef}
         >
           {data.companies.map((item, index) => (
             <CompanyCard
@@ -60,7 +57,6 @@ export const MainContent = () => {
               key={`${item.id}-${index}`}
               {...item}
               hasObserver={data.totalCount > 6}
-              style={companyCardStyle}
             />
           ))}
         </div>

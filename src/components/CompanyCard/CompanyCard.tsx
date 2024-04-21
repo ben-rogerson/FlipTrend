@@ -3,8 +3,9 @@ import { IconGem } from '@/components/SvgIcons'
 import { CompanyChart } from '@/components/CompanyCard/CompanyChart'
 import { getRadarColors } from '@/utils/graphs'
 import { getAbbreviatedNumber } from '@/utils/numbers'
-import { type CSSProperties, useRef } from 'react'
+import { useRef } from 'react'
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
+import { useRefHeightMeasure } from '@/hooks/useRefHeightMeasure'
 
 const MAX_SCORE = 30
 
@@ -15,9 +16,7 @@ const highColor = { h: 90, s: 76, l: 50 }
 const lowColor = { h: 0, s: 76, l: 61 }
 const radarColors = getRadarColors(highColor, lowColor, MAX_SCORE)
 
-export const CompanyCard = (
-  props: Company & { style?: CSSProperties; hasObserver: boolean }
-) => {
+export const CompanyCard = (props: Company & { hasObserver: boolean }) => {
   const observeRef = useRef<HTMLDivElement>(null)
   const observer = useIntersectionObserver(observeRef)
 
@@ -25,14 +24,19 @@ export const CompanyCard = (
   const marketCapData = getAbbreviatedNumber(props.grid.data.market_cap)
   const score = getScore(props.score)
 
+  const { refCallback, height } = useRefHeightMeasure<HTMLDivElement>()
+
   return (
     <article
       ref={observeRef}
-      style={props.style}
-      className="group/card block @container/card "
+      style={(height ?? 0) > 0 ? { height: `${height}px` } : undefined}
+      className="group/card block @container/card"
     >
       {(!props.hasObserver || observer?.isIntersecting) && (
-        <div className="grid h-full gap-3 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight px-8 py-7 text-lg @sm/card:gap-6 @sm/card:pb-10 @sm/card:pt-7 @sm/card:text-2xl">
+        <div
+          className="grid h-full gap-3 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight px-8 py-7 text-lg @sm/card:gap-6 @sm/card:pb-10 @sm/card:pt-7 @sm/card:text-2xl"
+          ref={refCallback}
+        >
           <header className="grid items-start text-center @sm/card:grid-cols-[minmax(0,1fr)_auto] @sm/card:text-left">
             <div className="grid gap-1">
               <div className="text-muted">{props.unique_symbol}</div>
