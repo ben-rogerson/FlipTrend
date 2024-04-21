@@ -45,7 +45,7 @@ export const CountryList = (props: {
       <CommandGroup
         ref={listData.parentRef}
         className={cn(
-          'h-full max-h-[350px] w-full',
+          'h-full max-h-[350px] w-full overscroll-contain',
           listData.virtualOptions.length > 0
             ? 'overflow-auto'
             : 'overflow-hidden'
