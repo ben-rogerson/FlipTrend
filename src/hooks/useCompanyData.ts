@@ -45,8 +45,8 @@ export const useCompanyData = () => {
     [queryData.data]
   )
 
-  const totalDBRowCount = queryData.data?.pages[0]?.meta.real_total_records ?? 0
-  const hasNextPage = companies.length < totalDBRowCount
+  const totalCount = queryData.data?.pages[0]?.meta.real_total_records ?? 0
+  const hasNextPage = companies.length < totalCount
   // Avoid callable fetch function when there is no more data to fetch
   const fetchNextPage = hasNextPage ? queryData.fetchNextPage : () => null
 
@@ -63,6 +63,7 @@ export const useCompanyData = () => {
     fetchStatus: queryData.fetchStatus,
     fetchNextPage,
     hasNextPage,
+    totalCount,
   }
 }
 

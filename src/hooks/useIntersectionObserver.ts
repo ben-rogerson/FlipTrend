@@ -1,5 +1,8 @@
 import { useEffect, useState } from 'react'
 
+/**
+ * Use the IntersectionObserver API to observe an element.
+ */
 export const useIntersectionObserver = (
   ref: React.RefObject<HTMLElement>,
   options?: IntersectionObserverInit

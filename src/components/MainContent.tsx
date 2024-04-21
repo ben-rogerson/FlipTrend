@@ -63,7 +63,12 @@ export const MainContent = () => {
           ref={companyListRef}
         >
           {data.companies.map(item => (
-            <CompanyCard key={item.id} {...item} style={companyCardStyle} />
+            <CompanyCard
+              key={item.id}
+              {...item}
+              hasObserver={data.totalCount > 6}
+              style={companyCardStyle}
+            />
           ))}
         </div>
         <div ref={observeRef}>

@@ -15,7 +15,9 @@ const highColor = { h: 90, s: 76, l: 50 }
 const lowColor = { h: 0, s: 76, l: 61 }
 const radarColors = getRadarColors(highColor, lowColor, MAX_SCORE)
 
-export const CompanyCard = (props: Company & { style?: CSSProperties }) => {
+export const CompanyCard = (
+  props: Company & { style?: CSSProperties; hasObserver: boolean }
+) => {
   const observeRef = useRef<HTMLDivElement>(null)
   const observer = useIntersectionObserver(observeRef)
 
@@ -31,7 +33,7 @@ export const CompanyCard = (props: Company & { style?: CSSProperties }) => {
         rel="noopener noreferrer"
         className="group/card block @container/card"
       >
-        {observer?.isIntersecting && (
+        {(!props.hasObserver || observer?.isIntersecting) && (
           <article className="grid h-full gap-3 rounded-3xl border-2 bg-gradient-to-b from-bg-highlight px-8 py-7 text-lg group-hover/card:border-light @sm/card:gap-6 @sm/card:pb-10 @sm/card:pt-7 @sm/card:text-2xl">
             <header className="grid items-start text-center @sm/card:grid-cols-[minmax(0,1fr)_auto] @sm/card:text-left">
               <div className="grid gap-1">
