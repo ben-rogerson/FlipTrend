@@ -20,19 +20,9 @@ export const MainContent = () => {
 
   useEffect(() => {
     if (!observer?.isIntersecting) return
-    if (!data.hasNextPage) return
-    if (data.isFetching) return
-    if (data.isPending) return
-    if (data.status !== 'success') return
-
     void data.fetchNextPage()
-  }, [
-    data,
-    data.fetchStatus,
-    data.hasNextPage,
-    observer?.intersectionRatio,
-    observer?.isIntersecting,
-  ])
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- Avoid triggering additional page fetches
+  }, [observer?.isIntersecting])
 
   const pageTitle = `${data.country.label[0]} Market Stock Analysis`
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
