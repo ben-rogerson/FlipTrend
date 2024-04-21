@@ -6,7 +6,7 @@ export const SortMarketCap = () => {
   const [sort, setSort] = useSort()
 
   return (
-    <div className="grid items-end self-start">
+    <div className="mb-3 grid items-end self-end">
       <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_auto]">
         <div className="hidden gap-1 md:grid" aria-hidden>
           <div className="flex items-center justify-end gap-2">
