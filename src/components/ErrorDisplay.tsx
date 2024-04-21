@@ -15,7 +15,7 @@ export const ErrorDisplay = (props: { error: unknown }) => {
           <h1 className="font-heading text-2xl font-bold text-red-500 @lg/loader:text-4xl @lg/loader:tracking-tight">
             Oops, something went wrong
           </h1>
-          <pre>{msg}</pre>
+          <p>{msg}</p>
         </div>
       </div>
     </div>
