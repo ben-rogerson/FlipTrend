@@ -9,7 +9,7 @@ const DEFAULT_SORT = 'desc'
  * @example
  * ```tsx
  * const [sort, setSort] = useSort()
- * setSort({ sort: 'asc' })
+ * setSort('asc')
  * console.log(sort) // => 'asc'
  * ```
  */

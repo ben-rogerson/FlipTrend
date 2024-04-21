@@ -33,11 +33,11 @@ export const getRadarColors = (
 
   for (let i = 0; i <= numColors; i++) {
     const hue = Math.round(lowColor.h + i * hueStep)
-    const saturation = lowColor.s + i * saturationStep
-    const lightness = lowColor.l + i * lightnessStep
+    const saturation = Math.round(lowColor.s + i * saturationStep)
+    const lightness = Math.round(lowColor.l + i * lightnessStep)
 
     radarColors.set(i, {
-      color: `hsl(${hue}deg ${saturation - 25}% ${lowColor.l - 20}%)`,
+      color: `hsl(${hue}deg ${saturation - 25}% ${Math.max(lowColor.l - 20, 0)}%)`,
       backgroundColor: `hsl(${hue}deg ${saturation}% ${lightness}% / 70%)`,
       borderColor: `hsl(${hue}deg ${saturation}% ${lightness}%)`,
     })

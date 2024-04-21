@@ -30,11 +30,14 @@
         "./src/*"
       ]
     },
+    "types": [
+      "vite/client"
+    ],
     "incremental": true,
     "strictNullChecks": true,
     "esModuleInterop": true
   },
-  "include": ["src", "tailwind.config.ts","tailwind/*.ts"],
+  "include": ["src", "tailwind.config.ts","tailwind/*.ts", "test/vitest-setup.ts"],
   "exclude": [
     "node_modules"
   ],

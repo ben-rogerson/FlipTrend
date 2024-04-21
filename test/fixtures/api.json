@@ -1,0 +1,144 @@
+{
+    "data": [
+      {
+        "id": 109809,
+        "company_id": "1592FD9F-BF5B-469D-B8F3-D33379E0C0DE",
+        "trading_item_id": 2643913,
+        "name": "Royal Bank of Canada",
+        "slug": "royal-bank-of-canada",
+        "exchange_symbol": "TSX",
+        "ticker_symbol": "RY",
+        "unique_symbol": "TSX:RY",
+        "primary_ticker": true,
+        "last_updated": 1710115200000,
+        "canonical_url": "/stocks/ca/banks/tsx-ry/royal-bank-of-canada-shares",
+        "primary_canonical_url": "/stocks/ca/banks/tsx-ry/royal-bank-of-canada-shares",
+        "is_searchable": true,
+        "isin_symbol": "CA7800871021",
+        "score": {
+          "data": {
+            "value": 0,
+            "income": 0,
+            "health": 0,
+            "past": 1,
+            "future": 1,
+            "management": 0,
+            "misc": 0,
+            "total": 0,
+            "sentence": "Flawless balance sheet established dividend payer."
+          }
+        },
+        "grid": {
+          "data": {
+            "year_founded": 1864,
+            "description": "Royal Bank of Canada operates as a diversified financial service company worldwide.",
+            "logo_url": "/api/company/image/TSX:RY.PRJ/logo",
+            "share_price": 134.87,
+            "market_cap": 190690799290.0,
+            "pe": 12.663753,
+            "pb": 1.75979,
+            "price_to_sales": 3.5637810000000001,
+            "analyst_count": 11.0,
+            "return_1d": 0.0066429999999999996,
+            "return_7d": 0.022440000000000002,
+            "return_1yr_abs": 0.027424,
+            "price_target": 139.80267000000001,
+            "growth_3y": 0.024378,
+            "net_income_growth_annual": 0.024378,
+            "revenue_growth_annual": 0.049882000000000003,
+            "dividend_yield": 0.040927999999999999,
+            "primary_industry": { "id": 7010000, "name": "Banks" },
+            "currency_info": {
+              "reporting_unit_abs": 1,
+              "reporting_currency_iso": "CAD",
+              "trading_item_currency_iso": "CAD",
+              "reporting_unit_text": "Millions",
+              "reporting_unit_text_abs": "Absolute",
+              "primary_trading_item_currency_symbol": "CA$",
+              "reporting_currency_symbol": "CA$",
+              "reporting_unit": 1000000,
+              "trading_item_currency_symbol": "CA$",
+              "primary_trading_item_currency_iso": "CAD"
+            },
+            "main_thumb": "https://images.simplywall.st/asset/company-cover/109809-main-thumb/1585186601074",
+            "main_header": "https://images.simplywall.st/asset/company-cover/109809-main-header/1585186941972"
+          }
+        }
+      },
+      {
+        "id": 23515,
+        "company_id": "21024E62-1300-4F57-980C-5A7DFE86B7EC",
+        "trading_item_id": 2658411,
+        "name": "Toronto-Dominion Bank",
+        "slug": "toronto-dominion-bank",
+        "exchange_symbol": "TSX",
+        "ticker_symbol": "TD",
+        "unique_symbol": "TSX:TD",
+        "primary_ticker": true,
+        "last_updated": 1710115200000,
+        "canonical_url": "/stocks/ca/banks/tsx-td/toronto-dominion-bank-shares",
+        "primary_canonical_url": "/stocks/ca/banks/tsx-td/toronto-dominion-bank-shares",
+        "is_searchable": true,
+        "isin_symbol": "CA8911605092",
+        "score": {
+          "data": {
+            "value": 3,
+            "income": 4,
+            "health": 6,
+            "past": 2,
+            "future": 1,
+            "management": 0,
+            "misc": 0,
+            "total": 16,
+            "sentence": "Flawless balance sheet average dividend payer."
+          }
+        },
+        "grid": {
+          "data": {
+            "year_founded": 1855,
+            "description": "The Toronto-Dominion Bank, together with its subsidiaries, provides various financial products and services in Canada, the United States, and internationally.",
+            "logo_url": "/api/company/image/NYSE:TD/logo",
+            "share_price": 81.560000000000002,
+            "market_cap": 144534033306.0,
+            "pe": 12.599951000000001,
+            "pb": 1.347486,
+            "price_to_sales": 2.8675679999999999,
+            "analyst_count": 10.0,
+            "return_1d": 0.002212,
+            "return_7d": 0.016577000000000001,
+            "return_1yr_abs": 0.0081580000000000003,
+            "price_target": 87.191879999999998,
+            "growth_3y": 0.068448999999999996,
+            "net_income_growth_annual": 0.068448999999999996,
+            "revenue_growth_annual": 0.032635999999999998,
+            "dividend_yield": 0.050025,
+            "primary_industry": { "id": 7010000, "name": "Banks" },
+            "currency_info": {
+              "reporting_unit_abs": 1,
+              "reporting_currency_iso": "CAD",
+              "trading_item_currency_iso": "CAD",
+              "reporting_unit_text": "Millions",
+              "reporting_unit_text_abs": "Absolute",
+              "primary_trading_item_currency_symbol": "CA$",
+              "reporting_currency_symbol": "CA$",
+              "reporting_unit": 1000000,
+              "trading_item_currency_symbol": "CA$",
+              "primary_trading_item_currency_iso": "CAD"
+            },
+            "main_thumb": "https://images.simplywall.st/asset/company-cover/23515-main-thumb/1585186605219",
+            "main_header": "https://images.simplywall.st/asset/company-cover/23515-main-header/1585187598492"
+          }
+        }
+      }
+    ],
+    "meta": {
+      "total_records": 2,
+      "real_total_records": 2,
+      "state": "read",
+      "noResultIfLimit": false,
+      "pe": 13.670696123999999,
+      "return_1yr_abs": 0.085763479939999998,
+      "return_7d": 0.0101393957
+    }
+  }
+  

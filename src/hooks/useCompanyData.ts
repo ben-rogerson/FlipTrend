@@ -35,7 +35,6 @@ export const useCompanyData = () => {
     initialPageParam: 0,
     getNextPageParam: (_, groups) => groups.length,
     placeholderData: keepPreviousData,
-    retry: 1,
   })
 
   /**

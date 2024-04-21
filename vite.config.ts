@@ -1,6 +1,6 @@
 import path from 'path'
 import react from '@vitejs/plugin-react-swc'
-import { defineConfig } from 'vite'
+import { defineConfig } from 'vitest/config'
 import million from 'million/compiler'
 
 export default defineConfig({
@@ -29,5 +29,13 @@ export default defineConfig({
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
+  },
+  test: {
+    css: true,
+    globals: true,
+    environment: 'jsdom',
+    testTimeout: 2000,
+    setupFiles: path.resolve(__dirname, './test/vitest-setup.ts'),
+    include: ['**/*.test.tsx', '**/*.test.ts'],
   },
 })

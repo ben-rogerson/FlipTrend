@@ -20,6 +20,7 @@ module.exports = {
     'vite.config.ts',
     'tailwind.config.ts',
     'tailwind/*.ts',
+    'vitest-setup.ts',
   ],
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh', '@tanstack/eslint-plugin-query'],
@@ -41,4 +42,15 @@ module.exports = {
   },
   parserOptions: { project },
   settings: { 'import/resolver': { typescript: { project } } },
+  overrides: [
+    {
+      files: ['*.ts', '*.tsx'],
+      parserOptions: { project },
+    },
+    {
+      files: ['*.test.ts', '*.test.tsx'],
+      plugins: ['vitest'],
+      extends: ['plugin:vitest/recommended'],
+    },
+  ],
 }

@@ -15,7 +15,10 @@ export const SortMarketCap = () => {
             </div>
             <IconGem className="text-xl text-muted" />
           </div>
-          <div className="relative text-right font-heading text-3xl font-bold">
+          <div
+            className="relative text-right font-heading text-3xl font-bold"
+            data-testid="market-cap-status"
+          >
             <div
               className={cn(
                 'whitespace-nowrap transition-all duration-200',
