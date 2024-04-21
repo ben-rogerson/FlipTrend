@@ -62,9 +62,10 @@ export const MainContent = () => {
           aria-busy={data.isFetching || data.isFetchingNextPage}
           ref={companyListRef}
         >
-          {data.companies.map(item => (
+          {data.companies.map((item, index) => (
             <CompanyCard
-              key={item.id}
+              // eslint-disable-next-line react/no-array-index-key -- Avoid duplicate key issues in source data (see in global data ascending order)
+              key={`${item.id}-${index}`}
               {...item}
               hasObserver={data.totalCount > 6}
               style={companyCardStyle}
