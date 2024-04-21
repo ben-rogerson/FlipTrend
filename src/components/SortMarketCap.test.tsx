@@ -1,7 +1,7 @@
 import { describe, it, expect } from 'vitest'
+import { act } from 'react-dom/test-utils'
 import { render, screen, within } from '@testing-library/react'
 import { SortMarketCap } from '@/components/SortMarketCap'
-import { act } from 'react-dom/test-utils'
 
 describe('SortMarketCap', () => {
   it('should have a default sort of desc', () => {

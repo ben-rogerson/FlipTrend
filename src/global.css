@@ -1,3 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+Rest of CSS is contained within Tailwind plugins.
+See folder `/tailwind/*`
+*/

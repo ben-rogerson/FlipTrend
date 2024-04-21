@@ -2,10 +2,6 @@
 
 A web app to display company stock items by country.
 
-## TODO
-
-- [ ] Avoid double fetch on initial load
-
 ## File/folder structure
 
 As this is a small project while still requiring component organisation, I chose a component-based structure where files are primarily organised around the reusable UI components:
@@ -14,7 +10,7 @@ As this is a small project while still requiring component organisation, I chose
 # Component-based project structure (current)
 └── src
     ├── components
-    │   ├── Button
+    │   ├── CompanyCard
     │   ├── LoginForm
     │   │   ├── LoginForm.tsx
     │   │   └── LoginFormContext.tsx (React context functions)
@@ -257,3 +253,14 @@ Also tested on mobile Chrome and Safari.
 - [Wouter](https://github.com/molefrog/wouter) - Tiny router for React
 - [TailwindCSS](https://tailwindcss.com/) - Styling framework
 - [TanStack Query](https://tanstack.com/query/v5/) - Data fetching and caching
+
+## TODO
+
+- [ ] Fix occasional card height issues (need to track this down)
+- [ ] Fix occasional card hidden issues when after toggling sorting
+- [ ] Add more tests
+- [ ] Add more accessibility improvements
+- [ ] Add internationalization support
+- [ ] Add support for card height calc on resize
+- [ ] Fix location button hover/trigger width
+- [ ] Switch to a better styled centred header on mobile

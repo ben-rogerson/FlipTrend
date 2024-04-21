@@ -1,5 +1,5 @@
+import { useEffect, useRef } from 'react'
 import { COUNTRY_VALUE_ALL, PROJECT_NAME } from '@/constants'
-import { useTitle } from '@/hooks/useTitle'
 import { LoaderFetch } from '@/components/Loader/LoaderFetch'
 import { LoaderCard } from '@/components/Loader/LoaderCard'
 import { CompanyCard } from '@/components/CompanyCard/CompanyCard'
@@ -8,9 +8,9 @@ import { SortMarketCap } from '@/components/SortMarketCap'
 import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
 import { useCompanyData } from '@/hooks/useCompanyData'
+import { useGetCompanyCardHeightStyle } from '@/hooks/useGetCompanyCardHeightStyle'
+import { useTitle } from '@/hooks/useTitle'
 import { cn } from '@/utils/styles'
-import { useEffect, useRef } from 'react'
-import { useGetCompanyCardHeightStyle } from './useGetCompanyCardHeightStyle'
 
 export const MainContent = () => {
   const observeRef = useRef<HTMLDivElement>(null)
@@ -28,7 +28,7 @@ export const MainContent = () => {
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
 
   return (
-    <div className="grid select-none gap-12">
+    <div className="grid select-none gap-3 sm:gap-6 md:gap-12">
       <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-4 md:gap-6">
         <div className="grid h-fit gap-2">
           <h1 className="text-base font-bold uppercase tracking-wide text-muted sm:text-xl md:text-2xl">
@@ -42,15 +42,7 @@ export const MainContent = () => {
         <SortMarketCap />
       </div>
       <article className="grid gap-8 pb-10 md:gap-12">
-        {/* // TODO: Style error card */}
         <ErrorDisplay error={data.error?.message} />
-
-        {data.companies.length === 0 && !data.isFetching && (
-          <div>
-            Sorry, no stock data exists for that country, try another one.
-          </div>
-        )}
-
         <LoaderCard isLoading={data.isPending} message="Grabbing data" />
         <div
           className={cn(

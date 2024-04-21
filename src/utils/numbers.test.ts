@@ -1,5 +1,5 @@
-import { getAbbreviatedNumber } from '@/utils/numbers'
 import { describe, it, expect } from 'vitest'
+import { getAbbreviatedNumber } from '@/utils/numbers'
 
 describe('getAbbreviatedNumber', () => {
   it('should abbreviate a number in the trillions', () => {

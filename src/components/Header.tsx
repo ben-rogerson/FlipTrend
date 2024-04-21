@@ -36,7 +36,7 @@ export const Header = () => (
   <div className="flex select-none items-center justify-between">
     <Link
       to="/"
-      className="flex items-center gap-4 text-4xl font-bold tracking-tight padded-x padded-y"
+      className="flex items-center gap-4 text-3xl font-bold tracking-tight padded-x padded-y md:text-4xl"
       aria-label={`${PROJECT_NAME} home`}
     >
       <Logo /> {PROJECT_NAME}

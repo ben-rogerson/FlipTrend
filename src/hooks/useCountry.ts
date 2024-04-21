@@ -1,7 +1,7 @@
 import { useLocation, useParams, useSearch } from 'wouter'
 import { countryPickerData, type CountryItem } from '@/data/countries'
-import { type Filters } from '@/schemas/filters'
 import { COUNTRY_VALUE_ALL } from '@/constants'
+import { type Filters } from '@/schemas/filters'
 
 /**
  * Get or set the country in the URL

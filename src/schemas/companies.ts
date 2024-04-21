@@ -1,5 +1,10 @@
 import { z } from 'zod'
 
+/**
+ * Company schema
+ * Items commented out are not used in the current project and are stripped
+ * when the data is parsed.
+ */
 const companySchema = z.object({
   id: z.number(),
   // company_id: z.string(),

@@ -1,5 +1,5 @@
-import { getRadarColors } from '@/utils/graphs'
 import { describe, it, expect } from 'vitest'
+import { getRadarColors } from '@/utils/graphs'
 
 describe('getRadarColors', () => {
   it('should throw an error if numColors is less than 2', () => {
