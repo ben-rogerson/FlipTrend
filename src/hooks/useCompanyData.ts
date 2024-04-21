@@ -1,4 +1,4 @@
-import { useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { keepPreviousData, useInfiniteQuery } from '@tanstack/react-query'
 import {
   type CompaniesResponse,
@@ -14,9 +14,8 @@ const FETCH_SIZE = 12
 
 /**
  * Fetch and paginate company data based on the country and sort.
- * @param isEnabled - Whether the hook should fetch more data.
  */
-export const useCountryData = (isEnabled: boolean) => {
+export const useCompanyData = () => {
   const [sort] = useSort()
   const [country] = useCountry()
 
@@ -32,35 +31,37 @@ export const useCountryData = (isEnabled: boolean) => {
       )
       return fetchedData
     },
-    initialPageParam: 0,
-    getNextPageParam: (_lastGroup, groups) => groups.length,
     refetchOnWindowFocus: false,
-    retry: 1,
+    initialPageParam: 0,
+    getNextPageParam: (_, groups) => groups.length,
     placeholderData: keepPreviousData,
+    retry: 1,
   })
 
-  useEffect(() => {
-    if (!isEnabled) return
-    if (!queryData.hasNextPage) return
-    if (queryData.isFetching) return
-    void queryData.fetchNextPage()
-    // eslint-disable-next-line react-hooks/exhaustive-deps -- Only specific dependencies
-  }, [
-    queryData.fetchNextPage,
-    queryData.hasNextPage,
-    queryData.isFetching,
-    isEnabled,
-  ])
-
-  const flatData = useMemo(
+  /**
+   * Flatten the data for easier access.
+   */
+  const companies = useMemo(
     () => queryData.data?.pages.flatMap(page => page.data) ?? [],
     [queryData.data]
   )
 
   const totalDBRowCount = queryData.data?.pages[0]?.meta.real_total_records ?? 0
-  const totalFetched = flatData.length
 
-  return { flatData, country, totalDBRowCount, totalFetched, ...queryData }
+  return {
+    companies,
+    country,
+    status: queryData.status,
+    error: queryData.error,
+    isPending: queryData.isPending,
+    isFetching: queryData.isFetching,
+    isRefetching: queryData.isRefetching,
+    isFetchingNextPage: queryData.isFetchingNextPage,
+    isPlaceholderData: queryData.isPlaceholderData,
+    fetchStatus: queryData.fetchStatus,
+    fetchNextPage: queryData.fetchNextPage,
+    hasNextPage: companies.length < totalDBRowCount,
+  }
 }
 
 const fetchData = async (

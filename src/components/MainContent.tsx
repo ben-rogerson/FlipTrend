@@ -7,22 +7,34 @@ import { CountryPicker } from '@/components/CountryPicker/CountryPicker'
 import { SortMarketCap } from '@/components/SortMarketCap'
 import { ErrorDisplay } from '@/components/ErrorDisplay'
 import { useIntersectionObserver } from '@/hooks/useIntersectionObserver'
-import { useCountryData } from '@/hooks/useCountryData'
+import { useCompanyData } from '@/hooks/useCompanyData'
 import { cn } from '@/utils/styles'
+import { useEffect, useRef } from 'react'
+import { useGetCompanyCardHeightStyle } from './useGetCompanyCardHeightStyle'
 
 export const MainContent = () => {
-  const [observeRef, isIntersecting] = useIntersectionObserver({
-    rootMargin: '100px',
-  })
+  const observeRef = useRef<HTMLDivElement>(null)
+  const observer = useIntersectionObserver(observeRef)
+  const { companyListRef, companyCardStyle } = useGetCompanyCardHeightStyle()
+  const data = useCompanyData()
 
-  const data = useCountryData(isIntersecting)
+  useEffect(() => {
+    if (!observer?.isIntersecting) return
+    if (!data.hasNextPage) return
+    if (data.isFetching) return
+    if (data.isPending) return
+    if (data.status !== 'success') return
 
-  const pageTitle = `${data.country.value === COUNTRY_VALUE_ALL ? 'Global' : data.country.label[0]} Market Stock Analysis`
-  const seoTitleSuffix =
-    data.country.value === COUNTRY_VALUE_ALL
-      ? ''
-      : ` in ${data.country.label[0]}`
+    void data.fetchNextPage()
+  }, [
+    data,
+    data.fetchStatus,
+    data.hasNextPage,
+    observer?.intersectionRatio,
+    observer?.isIntersecting,
+  ])
 
+  const pageTitle = `${data.country.label[0]} Market Stock Analysis`
   useTitle(`${pageTitle} | ${PROJECT_NAME}`)
 
   return (
@@ -31,21 +43,19 @@ export const MainContent = () => {
         <div className="grid h-fit gap-2">
           <h1 className="text-base font-bold uppercase tracking-wide text-muted sm:text-xl md:text-2xl">
             Company stock analysis
-            <span className="sr-only">{seoTitleSuffix}</span>
+            {data.country.value !== COUNTRY_VALUE_ALL && (
+              <span className="sr-only">{` in ${data.country.label[0]}`}</span>
+            )}
           </h1>
           <CountryPicker />
         </div>
         <SortMarketCap />
       </div>
       <article className="grid gap-8 pb-10 md:gap-12">
-        {/* <div className="text-muted">
-        {response.meta.real_total_records} results
-      </div> */}
-
         {/* // TODO: Style error card */}
         <ErrorDisplay error={data.error?.message} />
 
-        {data.flatData.length === 0 && !data.isFetching && (
+        {data.companies.length === 0 && !data.isFetching && (
           <div>
             Sorry, no stock data exists for that country, try another one.
           </div>
@@ -60,12 +70,13 @@ export const MainContent = () => {
           )}
           role="feed"
           aria-busy={data.isFetching || data.isFetchingNextPage}
+          ref={companyListRef}
         >
-          {data.flatData.map(company => (
-            <CompanyCard key={company.id} {...company} />
+          {data.companies.map(item => (
+            <CompanyCard key={item.id} {...item} style={companyCardStyle} />
           ))}
         </div>
-        <div ref={data.totalFetched < data.totalDBRowCount ? observeRef : null}>
+        <div ref={observeRef}>
           <LoaderFetch isLoading={data.isFetchingNextPage} />
         </div>
       </article>

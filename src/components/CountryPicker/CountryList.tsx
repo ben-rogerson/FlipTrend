@@ -1,5 +1,4 @@
-import { useRef, useState } from 'react'
-import { useVirtualizer } from '@tanstack/react-virtual'
+import { useState } from 'react'
 import {
   Command,
   CommandEmpty,
@@ -10,6 +9,7 @@ import {
 } from '@/components/ui/command'
 import { IconCheck } from '@/components/SvgIcons'
 import { cn } from '@/utils/styles'
+import { useCountryVirtualizedList } from '@/hooks/useCountryVirtualizedList'
 import { type CountryItem, countryPickerData } from '@/data/countries'
 
 export const CountryList = (props: {
@@ -19,16 +19,7 @@ export const CountryList = (props: {
 }) => {
   const [filteredOptions, setFilteredOptions] =
     useState<CountryItem[]>(countryPickerData)
-  const parentRef = useRef(null)
-
-  const virtualizer = useVirtualizer({
-    count: filteredOptions.length,
-    getScrollElement: () => parentRef.current,
-    estimateSize: () => 50,
-    overscan: 7,
-  })
-
-  const virtualOptions = virtualizer.getVirtualItems()
+  const listData = useCountryVirtualizedList(filteredOptions.length)
 
   const handleSearch = (rawKeywords: string) => {
     const keywords = rawKeywords.trim().toLowerCase()
@@ -52,18 +43,17 @@ export const CountryList = (props: {
         No country found.
       </CommandEmpty>
       <CommandGroup
-        ref={parentRef}
+        ref={listData.parentRef}
         className={cn(
           'h-full max-h-[350px] w-full',
-          virtualOptions.length > 0 ? 'overflow-auto' : 'overflow-hidden'
+          listData.virtualOptions.length > 0
+            ? 'overflow-auto'
+            : 'overflow-hidden'
         )}
       >
-        <div
-          className="relative w-full"
-          style={{ height: `${virtualizer.getTotalSize()}px` }}
-        >
+        <div className="relative w-full" style={listData.parentHeightStyle}>
           <CommandList>
-            {virtualOptions.map(virtualOption => {
+            {listData.virtualOptions.map(virtualOption => {
               const virtualItem = filteredOptions[virtualOption.index]
               if (!virtualItem) return null
               return (
@@ -76,8 +66,12 @@ export const CountryList = (props: {
                   key={virtualItem.value}
                   value={virtualItem.value}
                   onSelect={value => {
-                    props.setCountry(value as CountryItem['value'])
                     props.setOpen(false)
+                    // Perf fix:
+                    // Delay the state update to allow the dropdown to close
+                    setTimeout(() => {
+                      props.setCountry(value as CountryItem['value'])
+                    })
                   }}
                 >
                   <IconCheck

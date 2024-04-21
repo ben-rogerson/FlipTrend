@@ -4,18 +4,7 @@ A web app to display company stock items by country.
 
 ## TODO
 
-- [ ] Compile requirements
-- [ ] Compile features
-- [ ] Initial Figma design
-- [ ] Setup project
-- [ ] Make it deploy
-- [ ] Work out the data structure
-- [ ] Scaffold basic UI with mock data
-- [ ] Fetch data from API
-- [ ] Display data in UI
-- [ ] Add routing for Location filtering
-- [ ] Add market cap sorting by URL params
-- [ ] Error management
+- [ ] Avoid double fetch on initial load
 
 ## File/folder structure
 
@@ -104,39 +93,41 @@ Anything beyond this would require a more complex structure with a monorepo setu
 
 ## Why I chose&hellip;
 
-- [ ] Why use client rendering (non-ssr)
+- Why use client rendering (non-ssr)
   - This app aims to be as simple as possible (no over engineering) - SSR adds a server and more complexity.
   - SEO is not a priority - this is a private app for a small group of users.
   - The app is small and doesn’t require the performance benefits of SSR (like improving TTFB/FCP).
   - The page content is highly dynamic and interactive, so client rendering is a better fit.
-- [ ] Why Vite
+- Why Vite
   - Vite is a modern build tool that is fast and simple to use.
   - It has a great developer experience with features like hot module replacement.
   - It’s simple and light and doesn’t require a complex setup.
   - It has a great plugin system and is easy to extend.
   - It’s not like Webpack - configuration is simple and easy to understand.
   - It’s well suited for small CSR apps like this one. If SSR is required then Remix.js would be a better choice (it uses Vite under-the-hood).
-- [ ] Why Tailwind
+- Why Tailwind
   - It only creates css from the classes you use, so it’s very light.
   - It’s easy to use and has a great developer experience.
   - It’s great for prototyping and iterating quickly.
   - It’s easy to customise and extend.
   - It’s quick to add styles for responsive design.
   - Cons: It can be hard to read the JSX and maintain in large projects / It forces you to use components to avoid duplicate class sets (good thing though) / You pretty much need to use a helper like `clsx` or `classnames` to deal with conditional classes and large class sets.
-- [ ] Why Tanstack
-  - ....
-- [ ] Why Million.js
+- Why Tanstack Query
+  - It’s a great data fetching library that’s easy to use and has a great developer experience.
+  - It’s simple and light and doesn’t require a complex setup.
+  - It’s great for caching and refetching data and handles a bunch of common use cases.
+- Why Million.js
   - It’s a faster React compiler that removes the diffing algorithm.
   - It’s great for large lists, like this app has after you scroll a few times.
   - Cons: `<slots/>` littering up the elements panel / covers up some react errors
-- [ ] Why Wouter
+- Why Wouter
   - It’s a tiny router for React that’s easy to use and has a great developer experience.
   - It’s simple and light and doesn’t require a complex setup.
   - It offers hooks for easy navigation and URL params.
   - It a similar api to React Router, so it’s familiar and easy to switch to if needed.
   - It has a great name.
-- [ ] Why Vitest
-  - ...
+- Why Vitest
+  - It couples well with Vite, is easy to set up and natively supports ESM (unlike Jest).
 
 ## Accessibility
 
@@ -155,23 +146,17 @@ Anything beyond this would require a more complex structure with a monorepo setu
 
 ## Tests
 
-- [ ] Add Vitest unit tests for radar chart color function
-- [ ] Add Vitest unit tests for radar chart data function
-- [ ] TODO: Setup Playwright for E2E tests
+- [ ] TODO: Add additional tests to improve coverage
+  - Eg: Test Country switching, Sort switching, Link clicking, It renders, Chart display, Market cap, Score
 
 ## Performance improvements
 
 - [x] Used [Tailwind CSS](https://tailwindcss.com/) for styling to ensure minimal css generation from only the used classes.
 - [x] Added [Million.js](https://million.dev/docs/introduction#why-millionjs) to speed up React reconciliation - it removes the React diffing algorithm and directly updates the DOM nodes instead - this benefits my large market list which contains many elements.
-- [x] Added virtualization using [TanStack Virtual](https://tanstack.com/virtual/latest) to improve performance when scrolling through lists.
-  - This avoids rendering all the items at once to allow butter-smooth scrolling and fast page loads.
-  - [ ] Added it to the company list to improve performance when scrolling through the list.
-    - Tradeoff: Say goodbye to browser based "Find" (⌘F).
-  - [x] Added it to the country picker to improve performance when scrolling through the list.
-    - There was lag when searching/opening the country list in the combobox dropdown.
-    - Added virtualization to only render the visible items in the list.
-    - Tradeoff: Had to abandon the built in filtering support from the [cmdk](https://cmdk.paco.me/) package and add my own.
-- [ ] Reduced re-rendering by using `React.memo` and `useMemo` to prevent unnecessary re-renders.
+- [x] Country picker: Added virtualization using [TanStack Virtual](https://tanstack.com/virtual/latest) to improve performance when scrolling through list.
+  - Tradeoff: Had to abandon the built in filtering support from the [cmdk](https://cmdk.paco.me/) package and add my own.
+- [x] Company list: Added custom virtualization using intersection observer.
+  - Tradeoff: Say goodbye to browser based "Find" (⌘F).
 - [x] Used the [Web Vitals Extension](https://github.com/GoogleChrome/web-vitals-extension) to assess page load performance and improve metrics throughout development.
 - [x] Used [Lighthouse](https://chromewebstore.google.com/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk) in the Chrome developer tools to improve desktop performance score from 99 to 100.
 - [x] Added `<link rel="preconnect" href="https://simplywall.st" crossorigin />` to the head of the document to reduce the time taken to connect to the API.
@@ -224,16 +209,6 @@ Check out the app at: 💹 [fliptrend.benrogerson.dev](https://fliptrend.benroge
 - Styled with [TailwindCSS](https://tailwindcss.com/) with animations from [Tailwind CSS Animate](https://github.com/jamiebuilds/tailwindcss-animate)
 - It is currently deployed on [Vercel](https://vercel.com/)
 
-## Features
-
-- [x] ...
-
-## Future features
-
-- [ ] ...
-- [ ] Add E2E tests
-- [ ] Performance improvements (re-rendering)
-
 ## Run this project locally
 
 1. Clone the project:
@@ -245,7 +220,7 @@ npx degit https://github.com/ben-rogerson/FlipTrend FlipTrend
 2. cd into the project and install the dependencies:
 
 ```shell
-cd $_ && npm install
+cd $_ && pnpm install
 ```
 
 3. Then choose one of these tasks:
@@ -253,14 +228,14 @@ cd $_ && npm install
 Start the development server:
 
 ```shell
-npm run dev
+pnpm run dev
 ```
 
 Or build and preview the project:
 
 ```shell
-npm run build
-npm run preview
+pnpm run build
+pnpm run preview
 ```
 
 ## Supported browsers
