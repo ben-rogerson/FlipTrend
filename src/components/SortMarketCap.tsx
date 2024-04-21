@@ -56,6 +56,7 @@ export const SortMarketCap = () => {
               name="sort"
               value="desc"
               checked={sort === 'desc'}
+              readOnly
             />
             <input
               className="peer/asc sr-only"
@@ -64,6 +65,7 @@ export const SortMarketCap = () => {
               name="sort"
               value="asc"
               checked={sort === 'asc'}
+              readOnly
             />
             <label
               className={cn(
