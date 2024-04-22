@@ -27,7 +27,7 @@ export const MainContent = () => {
 
   return (
     <div className="grid select-none gap-3 sm:gap-6 md:gap-12">
-      <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-4 md:gap-6">
+      <div className="grid gap-4 md:grid-cols-[minmax(0,1fr)_auto] md:gap-6">
         <div className="grid h-fit gap-2">
           <h1 className="text-base font-bold uppercase tracking-wide text-muted sm:text-xl md:text-2xl">
             Company stock analysis
@@ -39,7 +39,7 @@ export const MainContent = () => {
         </div>
         <SortMarketCap />
       </div>
-      <article className="grid gap-8 pb-10 md:gap-12">
+      <article className="grid min-h-[300px] gap-8 pb-10 md:gap-12">
         <ErrorDisplay error={data.error?.message} />
         <LoaderCard isLoading={data.isPending} message="Grabbing data" />
         <div
