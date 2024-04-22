@@ -29,7 +29,11 @@ export const CompanyCard = (props: Company & { hasObserver: boolean }) => {
   return (
     <article
       ref={observeRef}
-      style={(height ?? 0) > 0 ? { height: `${height}px` } : undefined}
+      style={
+        // Calculate the height of the card based on the content.
+        // `minHeight` attempts to improve scroll behaviour on small screens
+        (height ?? 0) > 0 ? { height: `${height}px` } : { minHeight: '356px' }
+      }
       className="group/card block @container/card"
     >
       {(!props.hasObserver || observer?.isIntersecting) && (
