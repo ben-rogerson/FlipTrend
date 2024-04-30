@@ -38,7 +38,7 @@ const radarLabels = (
     viewBox="0 0 250 250"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className="absolute inset-0 top-0"
+    className="absolute inset-0 top-0 delay-200 duration-700 animate-in fade-in-0 fill-mode-backwards"
     aria-hidden
   >
     <path id="valueCurve" d={valueCircle} />
@@ -111,7 +111,7 @@ export const CompanyChart = (props: {
       <Radar
         data={data}
         options={getRadarOptions(colorGridBg, colorGridLine)}
-        className="p-[12%]"
+        className="p-[12%] duration-700 animate-in fade-in-0 zoom-in-95 fill-mode-backwards"
       />
       <figcaption className="sr-only">
         {[
