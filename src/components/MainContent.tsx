@@ -39,7 +39,7 @@ export const MainContent = () => {
         </div>
         <SortMarketCap />
       </div>
-      <article className="grid min-h-[300px] gap-8 pb-10 md:gap-12">
+      <article className="grid min-h-[900px] gap-8 pb-10 md:gap-12">
         <ErrorDisplay error={data.error?.message} />
         <LoaderCard isLoading={data.isPending} message="Grabbing data" />
         <div
