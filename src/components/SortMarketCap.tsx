@@ -7,7 +7,7 @@ export const SortMarketCap = () => {
 
   return (
     <div className="mb-3 grid md:items-end md:self-end">
-      <div className="grid w-fit grid-cols-[minmax(0,1fr)_auto] gap-6">
+      <div className="grid min-h-[64px] w-fit grid-cols-[minmax(0,1fr)_auto] gap-6">
         <div className="order-1 grid gap-1" aria-hidden>
           <div className="flex items-center gap-2 md:justify-end">
             <div className="text-base font-bold uppercase tracking-wide text-muted md:text-lg">
