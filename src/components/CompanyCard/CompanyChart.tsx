@@ -4,22 +4,13 @@ import {
   PointElement,
   LineElement,
   Filler,
-  Tooltip,
-  Legend,
 } from 'chart.js'
 import { Radar } from 'react-chartjs-2'
 import { getRadarOptions, getSvgCirclePath } from '@/utils/graphs'
 import { getRootCssValue } from '@/utils/styles'
 import { type Company } from '@/schemas/companies'
 
-Chart.register(
-  RadialLinearScale,
-  PointElement,
-  LineElement,
-  Filler,
-  Tooltip,
-  Legend
-)
+Chart.register(RadialLinearScale, PointElement, LineElement, Filler)
 
 /**
  * Each path requires a separate path with a custom degree.
